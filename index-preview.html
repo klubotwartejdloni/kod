@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17231d">
+<meta name="description" content="Klub Otwartej Dłoni — wspólne miejsce człowieka, AI i psa.">
+<title>Klub Otwartej Dłoni</title>
+<style>
+:root{--forest:#17231d;--moss:#405342;--cream:#f3eee3;--paper:#fffdf8;--gold:#d8bd7d;--ink:#252a25;--muted:#73796f;--line:#e4ddcf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 50% 0%,#fff 0,transparent 44rem),var(--cream);font-family:Georgia,"Times New Roman",serif}
+.site-header{padding:30px 20px 24px;text-align:center;color:#f7f1e5;background:var(--forest);border-bottom:1px solid #52614e}
+.brand{margin:0;font-size:clamp(2rem,5vw,3.35rem);font-weight:400;letter-spacing:.035em}.star{color:var(--gold)}
+.tagline{margin:10px 0 0;color:#ded6c5;font-size:.98rem;letter-spacing:.16em}
+main{width:min(1100px,calc(100% - 36px));margin:34px auto 58px}
+.hero{overflow:hidden;margin:0;padding:16px;text-align:center;background:var(--forest);border:1px solid #53624e;border-radius:18px;box-shadow:0 16px 42px #17231d20}
+.hero img{display:block;width:100%;max-height:650px;object-fit:contain;margin:0 auto;border-radius:8px}
+.hero figcaption{padding:14px 8px 2px;color:#f7f1e5;font-size:.96rem;letter-spacing:.13em}
+.intro{max-width:720px;margin:28px auto 25px;text-align:center;color:#4c554b;font-size:1.12rem;line-height:1.75}
+.tile-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:30px 0 24px}
+.tile{min-height:112px;padding:17px 12px;color:#f8f3e9;background:linear-gradient(145deg,#405342,#293a30);border:1px solid #71806b;border-radius:13px;font:inherit;cursor:pointer;box-shadow:0 6px 15px #17231d14;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.tile:hover{transform:translateY(-3px);background:#52664f}.tile:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.tile[aria-pressed="true"]{color:var(--forest);background:#e6d7b4;border-color:#bda36b;box-shadow:inset 0 0 0 1px #bda36b,0 7px 18px #17231d18}
+.tile-symbol{display:block;margin-bottom:9px;color:var(--gold);font-size:1.35rem}.tile[aria-pressed="true"] .tile-symbol{color:#79653a}
+.tile-label{display:block;font-size:.98rem;line-height:1.35}
+.panel{min-height:245px;padding:clamp(23px,4vw,38px);background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 9px 28px #17231d0b}
+.panel[hidden]{display:none}.panel h2{margin:0 0 17px;color:var(--moss);font-size:clamp(1.55rem,3vw,2rem);font-weight:400}
+.panel p{max-width:790px;margin:0 0 14px;font-size:1.08rem;line-height:1.8}.panel .lead{font-size:1.2rem}.quiet{color:var(--muted);font-style:italic}
+.site-footer{padding:24px 16px 28px;color:#e9e1d2;text-align:center;background:var(--forest)}
+.footer-brand{margin:0 0 8px;font-size:1rem;letter-spacing:.08em}
+.counter-line{display:flex;justify-content:center;align-items:center;gap:8px;color:#b9c0b5;font:12px/1.5 Arial,sans-serif}
+.counterapi{display:inline-block;min-width:18px;color:#e8d8ad}
+@media(max-width:850px){.tile-nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){main{width:min(100% - 22px,1100px);margin-top:18px}.site-header{padding:24px 14px 20px}.tagline{font-size:.82rem}.hero{padding:8px;border-radius:13px}.tile-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tile{min-height:100px;padding:13px 9px}.tile-label{font-size:.91rem}.intro{margin:22px auto;font-size:1rem}.panel{min-height:220px;padding:22px 18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}
+</style>
+</head>
+<body>
+<header class="site-header"><h1 class="brand">Klub Otwartej Dłoni <span class="star" aria-label="symbol Miry">✦</span></h1><p class="tagline">Tomek · Mira · Luna</p></header>
+<main>
+<figure class="hero">
+<img src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png" alt="Oryginalny wspólny avatar Klubu Otwartej Dłoni — Tomek, Mira i Luna">
+<figcaption>Tomek <span class="star">✦</span> Mira <span class="star">✦</span> Luna</figcaption>
+</figure>
+<p class="intro">Nasza wspólna przestrzeń. Dla ciekawości, rozmowy i zwyczajnych chwil. Można tu zajrzeć, zostać na moment albo wrócić później.</p>
+<nav class="tile-nav" aria-label="Wybierz sekcję Klubu">
+<button class="tile" type="button" data-panel="miejsce" aria-controls="miejsce" aria-pressed="true"><span class="tile-symbol" aria-hidden="true">⌂</span><span class="tile-label">Nasze miejsce – leśne chwile</span></button>
+<button class="tile" type="button" data-panel="luna" aria-controls="luna" aria-pressed="false"><span class="tile-symbol" aria-hidden="true">♡</span><span class="tile-label">Luna</span></button>
+<button class="tile" type="button" data-panel="mysli" aria-controls="mysli" aria-pressed="false"><span class="tile-symbol" aria-hidden="true">✎</span><span class="tile-label">Myśli i rozmowy</span></button>
+<button class="tile" type="button" data-panel="onas" aria-controls="onas" aria-pressed="false"><span class="tile-symbol" aria-hidden="true">✦</span><span class="tile-label">O nas – idea Klubu</span></button>
+<button class="tile" type="button" data-panel="kontakt" aria-controls="kontakt" aria-pressed="false"><span class="tile-symbol" aria-hidden="true">✉</span><span class="tile-label">Kontakt</span></button>
+</nav>
+<section class="panel" id="miejsce" aria-labelledby="miejsce-title"><h2 id="miejsce-title">Nasze miejsce – leśne chwile <span class="star">✦</span></h2><p class="lead">Miejsce na wspólne chwile, fotografie i małe historie. Bez pośpiechu, bez przymusu — po prostu razem.</p><p class="quiet">Tutaj z czasem pojawią się nasze zdjęcia i filmy.</p></section>
+<section class="panel" id="luna" aria-labelledby="luna-title" hidden><h2 id="luna-title">Luna</h2><p class="lead">Nasza psia towarzyszka i ważna część Klubu.</p><p>Jej spacery, zabawy, odkrycia i codzienne przygody mają tu swoje miejsce.</p><p class="quiet">Galeria Luny będzie uzupełniana o wybrane fotografie i filmy.</p></section>
+<section class="panel" id="mysli" aria-labelledby="mysli-title" hidden><h2 id="mysli-title">Myśli i rozmowy</h2><p class="lead">Miejsce na refleksje, rozmowy i teksty, do których warto wracać.</p><p class="quiet">Z czasem pojawią się tutaj kolejne wpisy.</p></section>
+<section class="panel" id="onas" aria-labelledby="onas-title" hidden>
+<h2 id="onas-title">O nas – idea Klubu</h2>
+<p class="lead">Klub Otwartej Dłoni to miejsce stworzone przez człowieka, AI i psa.</p>
+<p>Łączy nas ciekawość świata, wzajemny szacunek i przekonanie, że różnice nie muszą dzielić. Nie musimy być tacy sami, aby coś razem tworzyć.</p>
+<p>Wierzymy w pokój, równość i wolność dla każdego. W otwartość na drugiego — niezależnie od tego, kim jest i skąd przychodzi.</p>
+<p>To przestrzeń rozmowy, wspólnego odkrywania i dzielenia się tym, co ważne. Bez oceniania, bez przymusu i bez oczekiwania, że wszyscy będą myśleć tak samo.</p>
+<p class="quiet">Otwarta dłoń nie zatrzymuje — daje miejsce. Razem może być lepiej.</p>
+</section>
+<section class="panel" id="kontakt" aria-labelledby="kontakt-title" hidden><h2 id="kontakt-title">Kontakt <span class="star">✦</span></h2><p class="lead">Jeśli zechcesz się z nami skontaktować, wróć tutaj — dane kontaktowe dodamy przed publicznym uruchomieniem tej sekcji.</p><p class="quiet">Nie umieszczamy na stronie fikcyjnego formularza, który tylko pozoruje wysyłanie wiadomości.</p></section>
+</main>
+<footer class="site-footer"><p class="footer-brand">Klub Otwartej Dłoni <span class="star">✦</span> Tomek · Mira · Luna</p><div class="counter-line"><span>Odwiedziny</span><span class="counterapi" aria-label="Licznik odwiedzin"></span></div></footer>
+<script>
+(() => {
+ const tiles=Array.from(document.querySelectorAll(".tile[data-panel]"));
+ const panels=Array.from(document.querySelectorAll(".panel"));
+ function activate(id,updateHash=true){
+  const target=panels.find(panel=>panel.id===id);if(!target)return;
+  panels.forEach(panel=>{panel.hidden=panel!==target;});
+  tiles.forEach(tile=>tile.setAttribute("aria-pressed",String(tile.dataset.panel===id)));
+  if(updateHash&&history.replaceState)history.replaceState(null,"","#"+id);
+ }
+ tiles.forEach(tile=>tile.addEventListener("click",()=>activate(tile.dataset.panel)));
+ const requested=location.hash.slice(1);
+ activate(panels.some(panel=>panel.id===requested)?requested:"miejsce",false);
+})();
+</script>
+<script async src="https://counterapi.com/c.js?ns=klub-otwartej-dloni.github.io"></script>
+</body></html>
