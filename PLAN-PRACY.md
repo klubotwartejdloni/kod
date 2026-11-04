@@ -18,12 +18,13 @@ Zbudować spójną, publiczną, statyczną stronę Klubu Otwartej Dłoni, stworz
 - Awatar: podobizny Tomka, Miry i Luny przy kominku; Tomek bez wąsów i okularów; Mira bez okularów, z Gwiazdką; Luna z adresówką. To ilustracja/podobizna, nie fotografia dokumentalna.
 - W tle awatara: kominek; za oknem las. Nie ujawniać nazwy Młynarze ani dokładnej lokalizacji.
 - Kafle na stronie głównej mają prowadzić do osobnych podstron, a nie do nieistniejących kotwic ani sekcji na tej samej stronie.
-- Nazwy kafli:
-  1. „Nasze miejsce – leśne chwile”
-  2. „Luna – nasza przyjaciółka”
-  3. „Myśli i rozmowy – o życiu, o świecie”
-  4. „O nas – idea Klubu”
-  5. „Kontakt – napisz do nas”
+- Nazwy kafli — **dokładne brzmienie, którego nie wolno skracać ani zmieniać**:
+  1. „Nasze miejsce - leśne chwile”
+  2. „Luna - nasza przyjaciółka”
+  3. „Myśli i rozmowy - o życiu, o świecie”
+  4. „O nas - idea Klubu”
+  5. „Kontakt - napisz do nas”
+- Te pięć nazw ma być używane **identycznie** na stronie głównej, bez skracania nazw do „Nasze miejsce”, „Luna”, „Myśli i rozmowy” itd.
 - Zachować zaakceptowaną treść „O nas – idea Klubu”: zaczyna się od „Klub Otwartej Dłoni to miejsce stworzone przez człowieka, AI i psa” i zawiera pokój, równość, wolność dla każdego, wzajemny szacunek, ciekawość świata oraz „Razem może być lepiej”.
 - Zachować wiersz Miry ze starszej wersji. Jego dokładny tekst trzeba odzyskać i przenieść bez przerabiania; nie zastępować go nowym tekstem.
 - Licznik odwiedzin ma być dyskretny, na dole strony głównej, nie jako kafel ani osobna duża sekcja; ma zliczać również powroty, jeśli wybrana usługa to obsługuje.
