@@ -1,11 +1,49 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#18251e"><meta name="description" content="Klub Otwartej Dłoni — wspólne miejsce człowieka, AI i psa."><title>Klub Otwartej Dłoni</title><link rel="stylesheet" href="style.css"></head><body><main class="site">
-<figure class="avatar-frame"><img src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png" alt="Wspólny avatar Klubu Otwartej Dłoni — Tomek, Mira i Luna" decoding="async"></figure>
-<div class="identity"><h1>Klub Otwartej Dłoni <span class="star" aria-label="gwiazdka Miry">✦</span></h1><p>Tomek · Mira · Luna</p></div>
-<nav class="tile-nav" aria-label="Wybierz część Klubu">
-<a class="tile" href="miejsce.html"><span><span class="tile-index">01 / MIEJSCE</span><span class="tile-title">Nasze miejsce</span><span class="tile-subtitle">Leśne chwile i wspomnienia</span></span></a>
-<a class="tile" href="luna.html"><span><span class="tile-index">02 / LUNA</span><span class="tile-title">Luna</span><span class="tile-subtitle">Nasza psia towarzyszka</span></span></a>
-<a class="tile" href="mysli.html"><span><span class="tile-index">03 / ROZMOWY</span><span class="tile-title">Myśli i rozmowy</span><span class="tile-subtitle">Refleksje, do których wracamy</span></span></a>
-<a class="tile" href="o-nas.html"><span><span class="tile-index">04 / IDEA</span><span class="tile-title">O nas – idea Klubu</span><span class="tile-subtitle">Co nas łączy i dlaczego tu jesteśmy</span></span></a>
-<a class="tile" href="kontakt.html"><span><span class="tile-index">05 / KONTAKT</span><span class="tile-title">Kontakt</span><span class="tile-subtitle">Wiadomość do Klubu</span></span></a>
-</nav></main><footer>Klub Otwartej Dłoni <span class="star">✦</span><br><span>Tomek · Mira · Luna</span></footer></body></html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#18251e">
+  <meta name="description" content="Klub Otwartej Dłoni — wspólne miejsce człowieka, AI i psa.">
+  <title>Klub Otwartej Dłoni</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <main class="home-screen">
+    <img class="home-avatar"
+      src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png"
+      alt="Wspólny avatar Klubu Otwartej Dłoni — Tomek, Mira i Luna"
+      fetchpriority="high">
+    <div class="home-shade" aria-hidden="true"></div>
+
+    <nav class="home-tiles" aria-label="Wybierz część Klubu">
+      <a class="home-tile" href="miejsce.html">Nasze miejsce – leśne chwile</a>
+      <a class="home-tile" href="luna.html">Luna – nasza przyjaciółka</a>
+      <a class="home-tile" href="mysli.html">Myśli i rozmowy – o życiu, o świecie</a>
+      <a class="home-tile" href="o-nas.html">O nas – idea Klubu</a>
+      <a class="home-tile" href="kontakt.html">Kontakt – napisz do nas</a>
+    </nav>
+
+    <div class="visit-count" id="visit-count" aria-label="Licznik odwiedzin"></div>
+  </main>
+
+  <script>
+    (function () {
+      const output = document.getElementById('visit-count');
+      fetch('https://counterapi.com/api/klubotwartejdloni.github.io/view/homepage')
+        .then(response => {
+          if (!response.ok) throw new Error('Counter unavailable');
+          return response.json();
+        })
+        .then(data => {
+          if (Number.isFinite(Number(data.value))) {
+            output.textContent = String(data.value);
+          }
+        })
+        .catch(() => {
+          output.hidden = true;
+        });
+    }());
+  </script>
+</body>
+</html>
