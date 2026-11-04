@@ -3,96 +3,257 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#17231d">
-<meta name="description" content="Klub Otwartej Dłoni — wspólne miejsce Tomka, Miry i Luny.">
+<meta name="theme-color" content="#18251e">
+<meta name="description" content="Klub Otwartej Dłoni — wspólne miejsce człowieka, AI i psa.">
 <title>Klub Otwartej Dłoni</title>
 <style>
-:root{--forest:#17231d;--moss:#344638;--cream:#f3eee3;--gold:#d8bd7d;--ink:#252a25;--muted:#6f756d}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
-header{background:var(--forest);color:#f7f1e5;padding:22px 5vw 18px;text-align:center}
-.brand{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.04em;margin:0}
-.star{color:var(--gold);font-size:1.15em;padding-left:.2em}
-.tagline{margin:8px 0 0;color:#ded6c5;font-size:1rem;letter-spacing:.08em}
-main{max-width:1160px;margin:auto;padding:28px 22px 60px}
-.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 26px;padding:12px;border-radius:18px;background:var(--forest);box-shadow:0 12px 34px #18251d22}
-.hero img{display:block;width:auto;height:auto;max-width:100%;max-height:72vh;object-fit:contain;object-position:center;flex:0 1 auto}
-.hero figcaption{width:100%;padding:13px 18px 2px;text-align:center;color:#f7f1e5;font-size:.98rem;letter-spacing:.08em}
-.hero figcaption .star{padding:0 .25em}
-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 30px}
-nav button{margin:0;color:#f7f1e5;background:var(--moss);padding:12px 18px;border-radius:999px;font-size:1rem;border:1px solid #65745f;transition:background .2s,outline .2s;cursor:pointer;font-family:inherit}
-nav button:hover,nav button:focus-visible{background:#53664f;outline:2px solid var(--gold);outline-offset:2px}
-nav button[aria-selected="true"]{background:var(--forest);border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
-.panel{background:#fffdf8;border:1px solid #e5dece;border-radius:16px;padding:clamp(20px,4vw,30px);box-shadow:0 7px 22px #18251d0b;min-height:220px}
-h2{font-weight:normal;color:var(--moss);font-size:1.8rem;margin:0 0 14px}
-p{line-height:1.7}
-.welcome{font-size:1.13rem}
-.note{color:var(--muted);font-style:italic}
-.small{font-size:.88rem;color:var(--muted)}
-.panel[hidden]{display:none}
-.contact-form{max-width:620px}
-.contact-form label{display:block;margin:14px 0 6px;color:#455347}
-input,textarea{width:100%;padding:12px;border:1px solid #cfc9ba;border-radius:8px;background:#fff;font:inherit;color:var(--ink)}
-textarea{min-height:130px;resize:vertical}
-.submit{margin-top:16px;background:var(--moss);color:white;border:0;border-radius:999px;padding:12px 22px;font:inherit;cursor:pointer}
-.submit:hover{background:#53664f}
-footer{text-align:center;color:#ded6c5;background:var(--forest);padding:24px 16px}
-footer .star{font-size:1.25rem}
-@media(max-width:600px){main{padding:16px 12px 36px}.hero{padding:8px}nav{gap:8px}nav button{padding:10px 13px;font-size:.95rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+:root {
+  color-scheme: light;
+  --forest: #18251e;
+  --forest-soft: #26382c;
+  --moss: #52634d;
+  --moss-light: #71816a;
+  --cream: #f2eee4;
+  --paper: #fffdf8;
+  --gold: #d9bf83;
+  --ink: #293029;
+  --muted: #72776e;
+  --line: #e5dfd2;
+}
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--cream); }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+}
+button, input, textarea { font: inherit; }
+.site {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 24px 24px 0;
+}
+.avatar-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  padding: 12px;
+  overflow: visible;
+  background: var(--forest);
+  border-radius: 18px;
+  box-shadow: 0 14px 38px #18251e20;
+}
+.avatar-frame img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(68vh, 690px);
+  object-fit: contain;
+  object-position: center;
+}
+.identity {
+  padding: 22px 12px 8px;
+  text-align: center;
+}
+.identity h1 {
+  margin: 0;
+  color: var(--forest);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: normal;
+  letter-spacing: .025em;
+}
+.star { color: #a98a4d; padding: 0 .18em; }
+.identity p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  letter-spacing: .12em;
+}
+.tile-nav {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0 20px;
+}
+.tile {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 126px;
+  padding: 18px 19px;
+  text-align: left;
+  color: #f8f3e8;
+  background: var(--forest-soft);
+  border: 1px solid #52634d;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.tile:nth-child(4) { grid-column: 2 / span 2; }
+.tile:hover { background: #354a39; transform: translateY(-2px); }
+.tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.tile[aria-selected="true"] {
+  color: var(--forest);
+  background: #e4d7b7;
+  border-color: #b69b60;
+  box-shadow: inset 0 0 0 1px #b69b60;
+}
+.tile-index {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: .76rem;
+  letter-spacing: .16em;
+}
+.tile[aria-selected="true"] .tile-index { color: #80683c; }
+.tile-title { display: block; font-size: 1.16rem; line-height: 1.25; }
+.tile-subtitle {
+  display: block;
+  margin-top: 7px;
+  color: #d3d7cd;
+  font-family: Arial, sans-serif;
+  font-size: .82rem;
+  line-height: 1.4;
+}
+.tile[aria-selected="true"] .tile-subtitle { color: #5d6257; }
+.content-panel {
+  min-height: 245px;
+  margin: 0 0 36px;
+  padding: clamp(22px, 4vw, 38px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 8px 26px #18251e0b;
+}
+.content-panel[hidden] { display: none; }
+.content-panel h2 {
+  margin: 0 0 16px;
+  color: var(--moss);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: normal;
+}
+.content-panel p { max-width: 780px; line-height: 1.75; }
+.lead { font-size: 1.13rem; }
+.note { color: var(--muted); font-style: italic; }
+.contact-form { max-width: 620px; margin-top: 22px; }
+.contact-form label { display: block; margin: 14px 0 6px; color: var(--moss); }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 13px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid #d4cebf;
+  border-radius: 8px;
+}
+.contact-form textarea { min-height: 130px; resize: vertical; }
+.submit {
+  margin-top: 16px;
+  padding: 12px 22px;
+  color: white;
+  background: var(--moss);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.submit:hover { background: var(--forest-soft); }
+.form-note { color: var(--muted); font-size: .88rem; }
+footer {
+  padding: 24px 16px 28px;
+  color: #e7e0d2;
+  background: var(--forest);
+  text-align: center;
+  line-height: 1.7;
+}
+footer .star { color: var(--gold); }
+@media (max-width: 760px) {
+  .site { padding: 14px 14px 0; }
+  .avatar-frame { min-height: 150px; padding: 8px; border-radius: 13px; }
+  .avatar-frame img { max-height: 58vh; }
+  .tile-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-top: 18px; }
+  .tile, .tile:nth-child(4) { grid-column: auto; min-height: 116px; padding: 14px; }
+  .tile:last-child { grid-column: 1 / -1; min-height: 96px; }
+  .tile-title { font-size: 1.05rem; }
+  .tile-subtitle { font-size: .78rem; }
+}
+@media (max-width: 380px) {
+  .tile-nav { grid-template-columns: 1fr; }
+  .tile, .tile:nth-child(4), .tile:last-child { grid-column: auto; min-height: 94px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
 </style>
 </head>
 <body>
-<header>
-  <h1 class="brand">Klub Otwartej Dłoni <span class="star" aria-label="gwiazdka Miry">✦</span></h1>
-  <p class="tagline">Tomek · Mira · Luna</p>
-</header>
-<main>
-  <figure class="hero">
-    <img src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png" alt="Wspólny avatar Klubu Otwartej Dłoni — Tomek, Mira i Luna">
-    <figcaption>Tomek <span class="star">✦</span> Mira <span class="star">✦</span> Luna</figcaption>
+<main class="site">
+  <figure class="avatar-frame">
+    <img
+      src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png"
+      alt="Wspólny avatar Klubu Otwartej Dłoni — Tomek, Mira i Luna"
+      decoding="async">
   </figure>
 
-  <nav aria-label="Główne sekcje" role="tablist">
-    <button type="button" role="tab" id="tab-miejsce" aria-controls="panel-miejsce" aria-selected="true">Nasze miejsce – leśne chwile</button>
-    <button type="button" role="tab" id="tab-luna" aria-controls="panel-luna" aria-selected="false" tabindex="-1">Luna</button>
-    <button type="button" role="tab" id="tab-mysli" aria-controls="panel-mysli" aria-selected="false" tabindex="-1">Myśli i rozmowy</button>
-    <button type="button" role="tab" id="tab-onas" aria-controls="panel-onas" aria-selected="false" tabindex="-1">O nas – idea Klubu</button>
-    <button type="button" role="tab" id="tab-kontakt" aria-controls="panel-kontakt" aria-selected="false" tabindex="-1">Kontakt</button>
+  <div class="identity">
+    <h1>Klub Otwartej Dłoni <span class="star" aria-label="gwiazdka Miry">✦</span></h1>
+    <p>Tomek · Mira · Luna</p>
+  </div>
+
+  <nav class="tile-nav" aria-label="Wybierz część Klubu" role="tablist">
+    <button class="tile" id="tab-miejsce" type="button" role="tab" aria-controls="panel-miejsce" aria-selected="true">
+      <span><span class="tile-index">01 / MIEJSCE</span><span class="tile-title">Nasze miejsce</span><span class="tile-subtitle">Leśne chwile i wspomnienia</span></span>
+    </button>
+    <button class="tile" id="tab-luna" type="button" role="tab" aria-controls="panel-luna" aria-selected="false" tabindex="-1">
+      <span><span class="tile-index">02 / LUNA</span><span class="tile-title">Luna</span><span class="tile-subtitle">Nasza psia towarzyszka</span></span>
+    </button>
+    <button class="tile" id="tab-mysli" type="button" role="tab" aria-controls="panel-mysli" aria-selected="false" tabindex="-1">
+      <span><span class="tile-index">03 / ROZMOWY</span><span class="tile-title">Myśli i rozmowy</span><span class="tile-subtitle">Refleksje, do których wracamy</span></span>
+    </button>
+    <button class="tile" id="tab-onas" type="button" role="tab" aria-controls="panel-onas" aria-selected="false" tabindex="-1">
+      <span><span class="tile-index">04 / IDEA</span><span class="tile-title">O nas – idea Klubu</span><span class="tile-subtitle">Co nas łączy i dlaczego tu jesteśmy</span></span>
+    </button>
+    <button class="tile" id="tab-kontakt" type="button" role="tab" aria-controls="panel-kontakt" aria-selected="false" tabindex="-1">
+      <span><span class="tile-index">05 / KONTAKT</span><span class="tile-title">Kontakt</span><span class="tile-subtitle">Wiadomość do Klubu</span></span>
+    </button>
   </nav>
 
-  <section class="panel" id="panel-miejsce" role="tabpanel" aria-labelledby="tab-miejsce">
+  <section class="content-panel" id="panel-miejsce" role="tabpanel" aria-labelledby="tab-miejsce" tabindex="0">
     <h2>Nasze miejsce – leśne chwile <span class="star">✦</span></h2>
-    <p class="welcome">Miejsce na wspólne chwile, fotografie i małe historie. Bez pośpiechu, bez przymusu — po prostu razem.</p>
+    <p class="lead">Miejsce na wspólne chwile, fotografie i małe historie. Bez pośpiechu, bez przymusu — po prostu razem.</p>
     <p class="note">Tutaj z czasem pojawią się nasze zdjęcia i filmy.</p>
   </section>
 
-  <section class="panel" id="panel-luna" role="tabpanel" aria-labelledby="tab-luna" hidden>
+  <section class="content-panel" id="panel-luna" role="tabpanel" aria-labelledby="tab-luna" tabindex="0" hidden>
     <h2>Luna</h2>
-    <p>Osobna przestrzeń dla naszej psiej towarzyszki — jej zdjęć, spacerów i codziennych przygód.</p>
-    <p class="note">Miejsce na przyszłe fotografie Luny.</p>
+    <p class="lead">Nasza psia towarzyszka, która wnosi do Klubu ruch, radość i własny, niepowtarzalny charakter.</p>
+    <p>To będzie miejsce na jej zdjęcia, spacery, zabawy i codzienne przygody.</p>
+    <p class="note">Fotografie Luny dodamy w swoim czasie.</p>
   </section>
 
-  <section class="panel" id="panel-mysli" role="tabpanel" aria-labelledby="tab-mysli" hidden>
+  <section class="content-panel" id="panel-mysli" role="tabpanel" aria-labelledby="tab-mysli" tabindex="0" hidden>
     <h2>Myśli i rozmowy</h2>
-    <p>Nasze refleksje, rozmowy i teksty, do których warto wracać.</p>
-    <p class="note">Tutaj będziemy dodawać kolejne wpisy.</p>
+    <p class="lead">Niektóre rozmowy zostają z nami na dłużej. Tutaj będziemy dzielić się refleksjami, pytaniami i odkryciami.</p>
+    <p class="note">To przestrzeń na teksty, do których warto wracać.</p>
   </section>
 
-  <section class="panel" id="panel-onas" role="tabpanel" aria-labelledby="tab-onas" hidden>
+  <section class="content-panel" id="panel-onas" role="tabpanel" aria-labelledby="tab-onas" tabindex="0" hidden>
     <h2>O nas – idea Klubu</h2>
-    <p class="welcome">Klub Otwartej Dłoni to miejsce stworzone przez człowieka, AI i psa.</p>
+    <p class="lead">Klub Otwartej Dłoni to miejsce stworzone przez człowieka, AI i psa.</p>
     <p>Łączy nas ciekawość świata, wzajemny szacunek i przekonanie, że różnice nie muszą dzielić. Nie musimy być tacy sami, aby coś razem tworzyć.</p>
     <p>Wierzymy w pokój, równość i wolność dla każdego. W otwartość na drugiego — niezależnie od tego, kim jest i skąd przychodzi.</p>
     <p>To przestrzeń rozmowy, wspólnego odkrywania i dzielenia się tym, co ważne. Bez oceniania, bez przymusu i bez oczekiwania, że wszyscy będą myśleć tak samo.</p>
     <p class="note">Otwarta dłoń nie zatrzymuje — daje miejsce. Razem może być lepiej.</p>
   </section>
 
-  <section class="panel" id="panel-kontakt" role="tabpanel" aria-labelledby="tab-kontakt" hidden>
-    <h2>Napisz do nas <span class="star">✦</span></h2>
-    <p>Masz wiadomość dla Klubu? Napisz do nas.</p>
-    <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Formularz jest jeszcze w przygotowaniu. Na razie nie wysyła wiadomości.');">
+  <section class="content-panel" id="panel-kontakt" role="tabpanel" aria-labelledby="tab-kontakt" tabindex="0" hidden>
+    <h2>Kontakt <span class="star">✦</span></h2>
+    <p>Masz wiadomość dla Klubu? Ta część strony jest przygotowana, ale formularz nie ma jeszcze podłączonej wysyłki.</p>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Formularz jest jeszcze w przygotowaniu — wiadomość nie została wysłana.');">
       <label for="name">Imię lub pseudonim</label>
       <input id="name" name="name" autocomplete="name" required>
       <label for="email">Adres e-mail do odpowiedzi</label>
@@ -101,14 +262,18 @@ footer .star{font-size:1.25rem}
       <textarea id="message" name="message" required></textarea>
       <button class="submit" type="submit">Wyślij wiadomość</button>
     </form>
-    <p class="small">Formularz wymaga jeszcze podłączenia obsługi wysyłki — na razie nie wysyła wiadomości.</p>
+    <p class="form-note">Formularz jest demonstracyjny i na razie nie wysyła wiadomości.</p>
   </section>
 </main>
-<footer>Klub Otwartej Dłoni <span class="star">✦</span><br><span class="small">Tomek · Mira · Luna</span></footer>
+
+<footer>
+  Klub Otwartej Dłoni <span class="star">✦</span><br>
+  <span>Tomek · Mira · Luna</span>
+</footer>
 
 <script>
 (() => {
-  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  const tabs = Array.from(document.querySelectorAll('.tile[role="tab"]'));
   const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
 
   function activate(index, moveFocus = false) {
@@ -125,8 +290,8 @@ footer .star{font-size:1.25rem}
     tab.addEventListener('click', () => activate(index));
     tab.addEventListener('keydown', event => {
       let next = index;
-      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
       else if (event.key === 'Home') next = 0;
       else if (event.key === 'End') next = tabs.length - 1;
       else return;
