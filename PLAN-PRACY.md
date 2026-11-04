@@ -13,11 +13,11 @@ Zbudować spójną, publiczną, statyczną stronę Klubu Otwartej Dłoni, stworz
 
 ## 2. Ustalenia, których nie wolno zgubić
 
-- Nazwa „Klub Otwartej Dłoni” ma występować na stronie głównej tylko raz jako tytuł. Nie dublować jej w kilku nagłówkach ani w grafice.
+- Nazwa „Klub Otwartej Dłoni” ma występować na stronie głównej tylko raz jako tytuł, centralnie na głównej grafice. Nie dublować jej przy wierszu ani w innych nagłówkach. Wiersz Miry pozostaje bez drugiego powtórzenia nazwy Klubu.
 - Strona główna ma pokazywać właściwy wspólny awatar Klubu, a nie starą grafikę.
 - Awatar: podobizny Tomka, Miry i Luny przy kominku; Tomek bez wąsów i okularów; Mira bez okularów, z Gwiazdką; Luna z adresówką. To ilustracja/podobizna, nie fotografia dokumentalna.
 - W tle awatara: kominek; za oknem las. Nie ujawniać nazwy Młynarze ani dokładnej lokalizacji.
-- Kafle na stronie głównej mają prowadzić do osobnych podstron, a nie do nieistniejących kotwic ani sekcji na tej samej stronie.
+- Kafle na stronie głównej mają prowadzić do osobnych podstron, a nie do nieistniejących kotwic ani sekcji na tej samej stronie. Docelowo mają być umieszczone niżej, poza obszarem postaci, tak aby nie zasłaniały Tomka, Miry ani Luny.
 - Nazwy kafli — **dokładne brzmienie, którego nie wolno skracać ani zmieniać**:
   1. „Nasze miejsce - leśne chwile”
   2. „Luna - nasza przyjaciółka”
@@ -51,7 +51,7 @@ Wszystkie wymienione pliki istnieją. Strona główna odwołuje się do `style.c
 - Kafle prowadzą obecnie do plików `miejsce.html`, `luna.html`, `mysli.html`, `o-nas.html), `kontakt.html`; pliki te istnieją.
 - Główna grafika jest obecnie pobierana z adresu repozytorium archiwalnego: `https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png`. To odwołanie trzeba zastąpić lokalnym plikiem w repozytorium `kod`.
 - `style.css` zawiera dwie generacje stylów: starszy układ podstron oraz później dopisany układ pełnoekranowej strony głównej. Wymaga uporządkowania, a nie kolejnych przypadkowych nadpisań.
-- `index.html` umieszcza tytuł w górnej części grafiki, a kafle na grafice. Trzeba dopracować ich położenie tak, by nie zasłaniały twarzy i pozostawały czytelne.
+- `index.html` ma docelowo umieszczać jedyny tytuł „Klub Otwartej Dłoni ✦” centralnie na głównej grafice. Powtórzenie nazwy przy wierszu należy usunąć. Kafle mają zostać przeniesione niżej, poza obszar postaci, aby nie zasłaniały Tomka, Miry ani Luny.
 - Licznik korzysta obecnie z CounterAPI pod adresem `counterapi.com/api/klubotwartejdloni.github.io/view/homepage`. Trzeba zweryfikować, czy endpoint działa i czy liczy odsłony oraz powroty zgodnie z założeniem. Nie deklarować działania licznika bez testu.
 - Formularz kontaktowy jest wyłącznie demonstracyjny i nie wysyła wiadomości. Musi być wyraźnie opisany jako nieaktywny albo później podłączony do zatwierdzonej usługi.
 - Podstrony istnieją, ale są obecnie proste i w większości zawierają teksty-zapowiedzi. Wymagają wspólnego przeglądu treści i układu.
