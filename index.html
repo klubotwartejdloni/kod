@@ -13,8 +13,10 @@ header{background:var(--forest);color:#f7f1e5;padding:22px 5vw 18px;text-align:c
 .brand{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.04em;margin:0}.star{color:var(--gold);font-size:1.15em;padding-left:.2em}
 .tagline{margin:8px 0 0;color:#ded6c5;font-size:1rem;letter-spacing:.08em}
 main{max-width:1160px;margin:auto;padding:28px 22px 60px}
-.hero{position:relative;overflow:hidden;border-radius:18px;background:#26372d;box-shadow:0 12px 34px #18251d22}
-.hero img{display:block;width:100%;height:auto}
+.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:260px;margin:0 auto;border-radius:18px;background:var(--forest);box-shadow:0 12px 34px #18251d22}
+.hero img{display:block;width:100%;max-height: min(72vh, 720px);height:auto;object-fit:contain;object-position:center}
+.hero figcaption{width:100%;padding:13px 18px;text-align:center;color:#f7f1e5;background:#17231d;font-size:.98rem;letter-spacing:.08em}
+.hero figcaption .star{padding:0 .25em}
 nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 34px}
 nav a{color:#f7f1e5;text-decoration:none;background:var(--moss);padding:12px 18px;border-radius:999px;font-size:1rem;border:1px solid #65745f;transition:.2s}
 nav a:hover,nav a:focus{background:#53664f;outline:2px solid var(--gold);outline-offset:2px}
@@ -40,9 +42,10 @@ footer .star{font-size:1.25rem}
   <p class="tagline">Tomek · Mira · Luna</p>
 </header>
 <main>
-  <div class="hero">
-    <img src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png" alt="Zatwierdzony projekt graficzny strony Klubu Otwartej Dłoni">
-  </div>
+  <figure class="hero">
+    <img src="https://raw.githubusercontent.com/klubotwartejdloni/klub-otwartej-dloni/main/assets/projekt-klubu.png" alt="Wspólny avatar Klubu Otwartej Dłoni — Tomek, Mira i Luna">
+    <figcaption>Tomek <span class="star">✦</span> Mira <span class="star">✦</span> Luna</figcaption>
+  </figure>
 
   <nav aria-label="Główne sekcje">
     <a href="#miejsce">Nasze miejsce – leśne chwile</a>
