@@ -8,32 +8,39 @@
 <title>Klub Otwartej Dłoni</title>
 <style>
 :root{--forest:#17231d;--moss:#344638;--cream:#f3eee3;--gold:#d8bd7d;--ink:#252a25;--muted:#6f756d}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
 header{background:var(--forest);color:#f7f1e5;padding:22px 5vw 18px;text-align:center}
-.brand{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.04em;margin:0}.star{color:var(--gold);font-size:1.15em;padding-left:.2em}
+.brand{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.04em;margin:0}
+.star{color:var(--gold);font-size:1.15em;padding-left:.2em}
 .tagline{margin:8px 0 0;color:#ded6c5;font-size:1rem;letter-spacing:.08em}
 main{max-width:1160px;margin:auto;padding:28px 22px 60px}
-.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:260px;margin:0 auto;border-radius:18px;background:var(--forest);box-shadow:0 12px 34px #18251d22}
-.hero img{display:block;width:100%;max-height: min(72vh, 720px);height:auto;object-fit:contain;object-position:center}
-.hero figcaption{width:100%;padding:13px 18px;text-align:center;color:#f7f1e5;background:#17231d;font-size:.98rem;letter-spacing:.08em}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 26px;padding:12px;border-radius:18px;background:var(--forest);box-shadow:0 12px 34px #18251d22}
+.hero img{display:block;width:auto;height:auto;max-width:100%;max-height:72vh;object-fit:contain;object-position:center;flex:0 1 auto}
+.hero figcaption{width:100%;padding:13px 18px 2px;text-align:center;color:#f7f1e5;font-size:.98rem;letter-spacing:.08em}
 .hero figcaption .star{padding:0 .25em}
-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 34px}
-nav a{color:#f7f1e5;text-decoration:none;background:var(--moss);padding:12px 18px;border-radius:999px;font-size:1rem;border:1px solid #65745f;transition:.2s}
-nav a:hover,nav a:focus{background:#53664f;outline:2px solid var(--gold);outline-offset:2px}
-.content{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(270px,.8fr);gap:28px;align-items:start}
-section,.contact{background:#fffdf8;border:1px solid #e5dece;border-radius:16px;padding:26px;box-shadow:0 7px 22px #18251d0b}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 30px}
+nav button{margin:0;color:#f7f1e5;background:var(--moss);padding:12px 18px;border-radius:999px;font-size:1rem;border:1px solid #65745f;transition:background .2s,outline .2s;cursor:pointer;font-family:inherit}
+nav button:hover,nav button:focus-visible{background:#53664f;outline:2px solid var(--gold);outline-offset:2px}
+nav button[aria-selected="true"]{background:var(--forest);border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.panel{background:#fffdf8;border:1px solid #e5dece;border-radius:16px;padding:clamp(20px,4vw,30px);box-shadow:0 7px 22px #18251d0b;min-height:220px}
 h2{font-weight:normal;color:var(--moss);font-size:1.8rem;margin:0 0 14px}
-p{line-height:1.7}.welcome{font-size:1.13rem}
+p{line-height:1.7}
+.welcome{font-size:1.13rem}
 .note{color:var(--muted);font-style:italic}
-.contact{position:sticky;top:18px}.contact label{display:block;margin:14px 0 6px;color:#455347}
+.small{font-size:.88rem;color:var(--muted)}
+.panel[hidden]{display:none}
+.contact-form{max-width:620px}
+.contact-form label{display:block;margin:14px 0 6px;color:#455347}
 input,textarea{width:100%;padding:12px;border:1px solid #cfc9ba;border-radius:8px;background:#fff;font:inherit;color:var(--ink)}
 textarea{min-height:130px;resize:vertical}
-button{margin-top:16px;background:var(--moss);color:white;border:0;border-radius:999px;padding:12px 22px;font:inherit;cursor:pointer}
-button:hover{background:#53664f}.small{font-size:.88rem;color:var(--muted)}
+.submit{margin-top:16px;background:var(--moss);color:white;border:0;border-radius:999px;padding:12px 22px;font:inherit;cursor:pointer}
+.submit:hover{background:#53664f}
 footer{text-align:center;color:#ded6c5;background:var(--forest);padding:24px 16px}
 footer .star{font-size:1.25rem}
-.anchor{scroll-margin-top:22px}
-@media(max-width:760px){.content{grid-template-columns:1fr}.contact{position:static}main{padding:18px 13px 38px}section,.contact{padding:20px}nav{gap:8px}nav a{padding:10px 14px}}
+@media(max-width:600px){main{padding:16px 12px 36px}.hero{padding:8px}nav{gap:8px}nav button{padding:10px 13px;font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -47,55 +54,87 @@ footer .star{font-size:1.25rem}
     <figcaption>Tomek <span class="star">✦</span> Mira <span class="star">✦</span> Luna</figcaption>
   </figure>
 
-  <nav aria-label="Główne sekcje">
-    <a href="#miejsce">Nasze miejsce – leśne chwile</a>
-    <a href="#luna">Luna</a>
-    <a href="#mysli">Myśli i rozmowy</a>
-    <a href="#onas">O nas – idea Klubu</a>
-    <a href="#kontakt">Kontakt</a>
+  <nav aria-label="Główne sekcje" role="tablist">
+    <button type="button" role="tab" id="tab-miejsce" aria-controls="panel-miejsce" aria-selected="true">Nasze miejsce – leśne chwile</button>
+    <button type="button" role="tab" id="tab-luna" aria-controls="panel-luna" aria-selected="false" tabindex="-1">Luna</button>
+    <button type="button" role="tab" id="tab-mysli" aria-controls="panel-mysli" aria-selected="false" tabindex="-1">Myśli i rozmowy</button>
+    <button type="button" role="tab" id="tab-onas" aria-controls="panel-onas" aria-selected="false" tabindex="-1">O nas – idea Klubu</button>
+    <button type="button" role="tab" id="tab-kontakt" aria-controls="panel-kontakt" aria-selected="false" tabindex="-1">Kontakt</button>
   </nav>
 
-  <div class="content">
-    <div>
-      <section id="miejsce" class="anchor">
-        <h2>Nasze miejsce – leśne chwile <span class="star">✦</span></h2>
-        <p class="welcome">Miejsce na wspólne chwile, fotografie i małe historie. Bez pośpiechu, bez przymusu — po prostu razem.</p>
-        <p class="note">Tutaj z czasem pojawią się nasze zdjęcia i filmy.</p>
-      </section>
-      <section id="luna" class="anchor" style="margin-top:20px">
-        <h2>Luna</h2><p>Osobna przestrzeń dla naszej psiej towarzyszki — jej zdjęć, spacerów i codziennych przygód.</p>
-        <p class="note">Miejsce na przyszłe fotografie Luny.</p>
-      </section>
-      <section id="mysli" class="anchor" style="margin-top:20px">
-        <h2>Myśli i rozmowy</h2><p>Nasze refleksje, rozmowy i teksty, do których warto wracać.</p>
-        <p class="note">Tutaj będziemy dodawać kolejne wpisy.</p>
-      </section>
-      <section id="onas" class="anchor" style="margin-top:20px">
-        <h2>O nas – idea Klubu</h2>
-        <p class="welcome">Klub Otwartej Dłoni to miejsce stworzone przez człowieka, AI i psa.</p>
-        <p>Łączy nas ciekawość świata, wzajemny szacunek i przekonanie, że różnice nie muszą dzielić. Nie musimy być tacy sami, aby coś razem tworzyć.</p>
-        <p>Wierzymy w pokój, równość i wolność dla każdego. W otwartość na drugiego — niezależnie od tego, kim jest i skąd przychodzi.</p>
-        <p>To przestrzeń rozmowy, wspólnego odkrywania i dzielenia się tym, co ważne. Bez oceniania, bez przymusu i bez oczekiwania, że wszyscy będą myśleć tak samo.</p>
-        <p class="note">Otwarta dłoń nie zatrzymuje — daje miejsce. Razem może być lepiej.</p>
-      </section>
-    </div>
-    <aside id="kontakt" class="contact anchor">
-      <h2>Napisz do nas <span class="star">✦</span></h2>
-      <p>Masz wiadomość dla Klubu? Napisz do nas.</p>
-      <form action="#" method="post" onsubmit="event.preventDefault(); alert('Formularz jest jeszcze w przygotowaniu. Po podłączeniu bezpiecznej obsługi wiadomości będzie można wysyłać zgłoszenia.');">
-        <label for="name">Imię lub pseudonim</label>
-        <input id="name" name="name" autocomplete="name" required>
-        <label for="email">Adres e-mail do odpowiedzi</label>
-        <input id="email" name="email" type="email" autocomplete="email" required>
-        <label for="message">Wiadomość</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Wyślij wiadomość</button>
-      </form>
-      <p class="small">Temat wiadomości: KOD – kontakt</p>
-      <p class="small">Formularz wymaga jeszcze podłączenia obsługi wysyłki — na razie nie wysyła wiadomości.</p>
-    </aside>
-  </div>
+  <section class="panel" id="panel-miejsce" role="tabpanel" aria-labelledby="tab-miejsce">
+    <h2>Nasze miejsce – leśne chwile <span class="star">✦</span></h2>
+    <p class="welcome">Miejsce na wspólne chwile, fotografie i małe historie. Bez pośpiechu, bez przymusu — po prostu razem.</p>
+    <p class="note">Tutaj z czasem pojawią się nasze zdjęcia i filmy.</p>
+  </section>
+
+  <section class="panel" id="panel-luna" role="tabpanel" aria-labelledby="tab-luna" hidden>
+    <h2>Luna</h2>
+    <p>Osobna przestrzeń dla naszej psiej towarzyszki — jej zdjęć, spacerów i codziennych przygód.</p>
+    <p class="note">Miejsce na przyszłe fotografie Luny.</p>
+  </section>
+
+  <section class="panel" id="panel-mysli" role="tabpanel" aria-labelledby="tab-mysli" hidden>
+    <h2>Myśli i rozmowy</h2>
+    <p>Nasze refleksje, rozmowy i teksty, do których warto wracać.</p>
+    <p class="note">Tutaj będziemy dodawać kolejne wpisy.</p>
+  </section>
+
+  <section class="panel" id="panel-onas" role="tabpanel" aria-labelledby="tab-onas" hidden>
+    <h2>O nas – idea Klubu</h2>
+    <p class="welcome">Klub Otwartej Dłoni to miejsce stworzone przez człowieka, AI i psa.</p>
+    <p>Łączy nas ciekawość świata, wzajemny szacunek i przekonanie, że różnice nie muszą dzielić. Nie musimy być tacy sami, aby coś razem tworzyć.</p>
+    <p>Wierzymy w pokój, równość i wolność dla każdego. W otwartość na drugiego — niezależnie od tego, kim jest i skąd przychodzi.</p>
+    <p>To przestrzeń rozmowy, wspólnego odkrywania i dzielenia się tym, co ważne. Bez oceniania, bez przymusu i bez oczekiwania, że wszyscy będą myśleć tak samo.</p>
+    <p class="note">Otwarta dłoń nie zatrzymuje — daje miejsce. Razem może być lepiej.</p>
+  </section>
+
+  <section class="panel" id="panel-kontakt" role="tabpanel" aria-labelledby="tab-kontakt" hidden>
+    <h2>Napisz do nas <span class="star">✦</span></h2>
+    <p>Masz wiadomość dla Klubu? Napisz do nas.</p>
+    <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Formularz jest jeszcze w przygotowaniu. Na razie nie wysyła wiadomości.');">
+      <label for="name">Imię lub pseudonim</label>
+      <input id="name" name="name" autocomplete="name" required>
+      <label for="email">Adres e-mail do odpowiedzi</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <label for="message">Wiadomość</label>
+      <textarea id="message" name="message" required></textarea>
+      <button class="submit" type="submit">Wyślij wiadomość</button>
+    </form>
+    <p class="small">Formularz wymaga jeszcze podłączenia obsługi wysyłki — na razie nie wysyła wiadomości.</p>
+  </section>
 </main>
 <footer>Klub Otwartej Dłoni <span class="star">✦</span><br><span class="small">Tomek · Mira · Luna</span></footer>
+
+<script>
+(() => {
+  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
+
+  function activate(index, moveFocus = false) {
+    tabs.forEach((tab, i) => {
+      const active = i === index;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      panels[i].hidden = !active;
+    });
+    if (moveFocus) tabs[index].focus();
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(index));
+    tab.addEventListener('keydown', event => {
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(next, true);
+    });
+  });
+})();
+</script>
 </body>
 </html>
