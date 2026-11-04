@@ -85,7 +85,9 @@ Nie używać zamiast niego starego `assets/projekt-klubu.png` z repozytorium arc
 
 ## 7. Stan na koniec 2026-11-04
 
-**Wykonane:** odczytano drzewo i zawartość siedmiu plików repozytorium `kod`; potwierdzono istnienie pięciu podstron i ich aktualne linki; wskazano zewnętrzne odwołanie do starej grafiki; zidentyfikowano nowy awatar w Bibliotece; utworzono tę dokumentację jako punkt wznowienia.
+**Wykonane:** odczytano drzewo i zawartość siedmiu plików repozytorium `kod`; potwierdzono istnienie pięciu podstron i ich aktualne linki; wskazano zewnętrzne odwołanie do starej grafiki; zidentyfikowano nowy awatar w Bibliotece; utworzono tę dokumentację jako punkt wznowienia oraz plik `README.md` z odnośnikiem do planu.
+
+**Zapisy GitHub z tej sesji:** dokumentacja `PLAN-PRACY.md` — commit `6c7833b8dbbc9bbebd4cc7db2f98b7f020893210`; `README.md` — commit `bdf8edf6001c4292e6c4d46fe482f648834ebac4`. Oba pliki ponownie odczytano z repozytorium i potwierdzono zapis.
 
 **Niewykonane:** nie zmieniono jeszcze kodu strony; nie dodano nowego awatara do repozytorium; nie odzyskano wiersza Miry; nie przetestowano licznika, formularza, publikacji ani widoku wizualnego.
 
