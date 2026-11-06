@@ -12,7 +12,18 @@ Założenia:
 - nie rozciągać całego obrazu do 16:9,
 - na tym etapie nie zmieniać kodu strony ani innych elementów projektu.
 
-## Kolejny punkt
+## Kolejność kafli
+
+Od lewej do prawej:
+1. **Miejsce**
+2. **Luna**
+3. **Myśli**
+4. **O nas**
+5. **Kontakt**
+
+Każdy kafel będzie prowadził do odpowiedniej podstrony.
+
+## Zmiana kafla 4
 
 - W kaflu 4 **pozostaje ikonka aparatu**.
 - Zmieniamy **wyłącznie napis**:
