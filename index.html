@@ -36,13 +36,18 @@
     </script>
   </main>
 
-  <div class="visit-count" id="visit-counter" aria-label="Licznik odwiedzin" aria-live="polite">Odwiedziny: <span id="visit-number">…</span></div>
-
   <script>
     (() => {
-      const counter = document.getElementById('visit-counter');
+      const counter = document.createElement('div');
+      counter.className = 'visit-count';
+      counter.id = 'visit-counter';
+      counter.setAttribute('aria-label', 'Licznik odwiedzin');
+      counter.setAttribute('aria-live', 'polite');
+      counter.innerHTML = 'Odwiedziny: <span id="visit-number">…</span>';
+      document.documentElement.appendChild(counter);
+
       const viewport = window.visualViewport;
-      if (!counter || !viewport) return;
+      if (!viewport) return;
       const updateCounterViewport = () => {
         const scale = viewport.scale || 1;
         counter.style.transform = \`scale(\${1 / scale})\`;
