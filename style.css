@@ -33,7 +33,6 @@ body.home-page{
   height:100dvh;
   min-height:0;
   overflow:hidden;
-  isolation:isolate;
 }
 .home-avatar{
   position:absolute;
