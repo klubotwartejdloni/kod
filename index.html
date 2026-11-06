@@ -23,28 +23,16 @@
       <a class="home-tile" href="o-nas.html">O nas – idea Klubu</a>
       <a class="home-tile" href="kontakt.html">Kontakt – napisz do nas</a>
     </nav>
-
-    <script>
-      fetch('https://countapi.mileshilliard.com/api/v1/hit/klubotwartejdloni_homepage_20261106', {cache:'no-store'})
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('visit-number').textContent = data.value;
-        })
-        .catch(() => {
-          document.getElementById('visit-number').textContent = '—';
-        });
-    </script>
   </main>
 
   <script>
     (() => {
-      const counter = document.createElement('div');
-      counter.className = 'visit-count';
-      counter.id = 'visit-counter';
-      counter.setAttribute('aria-label', 'Licznik odwiedzin');
-      counter.setAttribute('aria-live', 'polite');
-      counter.innerHTML = 'Odwiedziny: <span id="visit-number">…</span>';
-      document.documentElement.appendChild(counter);
+      const frame = document.createElement('iframe');
+      frame.title = 'Licznik odwiedzin';
+      frame.setAttribute('aria-label', 'Licznik odwiedzin');
+      frame.style.cssText = 'position:fixed!important;z-index:2147483647!important;top:24px!important;left:50%!important;width:180px!important;height:24px!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;transform:translateX(-50%)!important;display:block!important;pointer-events:none!important;';
+      frame.srcdoc = `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:transparent}body{display:flex;align-items:center;justify-content:center;color:#fffaf0;font:500 13px/1 Arial,sans-serif;letter-spacing:.16em;text-shadow:0 1px 5px #000;white-space:nowrap}</style></head><body>Odwiedziny: <span id="n">…</span><script>fetch('https://countapi.mileshilliard.com/api/v1/hit/klubotwartejdloni_homepage_20261106',{cache:'no-store'}).then(r=>r.json()).then(d=>document.getElementById('n').textContent=d.value).catch(()=>document.getElementById('n').textContent='—');</script></body></html>`;
+      document.documentElement.appendChild(frame);
     })();
   </script>
 
