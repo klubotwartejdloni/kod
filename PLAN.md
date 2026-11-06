@@ -4,11 +4,15 @@
 
 Przygotować z obecnego PNG wersję w proporcjach 16:9.
 
+Obecny PNG ma **1518 × 919 px**. Docelowo, przy zachowaniu szerokości, wersja 16:9 będzie miała **1518 × 854 px**.
+
 Założenia:
 - bez deformowania twarzy i proporcji postaci,
-- w razie potrzeby zmniejszyć kafle,
-- w razie potrzeby obciąć dół grafiki,
-- w razie potrzeby obciąć górę grafiki, tak aby nie stracić ważnych szczegółów,
+- najpierw sprawdzić, czy wszystko mieści się bez zmniejszania kafli,
+- jeśli będzie za mało miejsca, zmniejszyć kafle,
+- jeśli nadal będzie potrzeba miejsca, w razie potrzeby obciąć górę grafiki tak, aby nie stracić ważnych szczegółów,
+- nie obcinać kafli,
+- zachować treść kafli,
 - usunąć na górze przyciski, które powtarzają to, co jest na dole w kaflach,
 - zachować główną kompozycję i charakter grafiki,
 - nie rozciągać całego obrazu do 16:9,
@@ -54,4 +58,4 @@ Każdy kafel będzie prowadził do odpowiedniej podstrony.
   **„O nas / idea Klubu”**
 - Ikonka aparatu nie jest zmieniana ani usuwana.
 
-To będą ustalone zmiany. Po wykonaniu każdej zmiany najpierw sprawdzamy efekt, a dopiero potem podejmujemy kolejną decyzję.
+To będą ustalone zmiany. Po wykonaniu przygotowania PNG najpierw sprawdzamy efekt, a dopiero potem podejmujemy kolejną decyzję.
