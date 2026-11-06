@@ -40,9 +40,9 @@ Każdy kafel będzie prowadził do odpowiedniej podstrony.
 
 ### Kafel 1
 - Zmiana wyłącznie jednej litery w drugim członie nazwy:
-  **„Nasze Miejsce / leśne chwile” → „Nasze Miejsce / Leśne chwile”**
+  **„Nasze miejsce / leśne chwile” → „Nasze miejsce / Leśne chwile”**
 - Jest to tylko zmiana małego **„l”** na wielkie **„L”** w słowie „Leśne”.
-- Słowo **„Miejsce”** pozostaje bez zmian.
+- Słowo **„miejsce”** pozostaje bez zmian.
 
 ### Kafel 4
 - W kaflu 4 **pozostaje ikonka aparatu**.
