@@ -26,26 +26,18 @@
       <a class="home-tile" href="kontakt.html">Kontakt – napisz do nas</a>
     </nav>
 
-    <div class="visit-count" id="visit-count" aria-label="Licznik odwiedzin" aria-live="polite"></div>
+    <div class="visit-count counterapi"
+      ns="klubotwartejdloni.github.io"
+      action="view"
+      key="homepage"
+      noCss="true"
+      noIcon="true"
+      noLink="true"
+      noFormatting="true"
+      aria-label="Licznik odwiedzin"
+      aria-live="polite"></div>
   </main>
 
-  <script>
-    (function () {
-      const output = document.getElementById('visit-count');
-      fetch('https://counterapi.com/api/klubotwartejdloni.github.io/view/homepage')
-        .then(response => {
-          if (!response.ok) throw new Error('Counter unavailable');
-          return response.json();
-        })
-        .then(data => {
-          if (Number.isFinite(Number(data.value))) {
-            output.textContent = String(data.value);
-          }
-        })
-        .catch(() => {
-          output.hidden = true;
-        });
-    }());
-  </script>
+  <script src="https://counterapi.com/c.js" async></script>
 </body>
 </html>
