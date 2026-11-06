@@ -16,7 +16,7 @@ Założenia:
 
 Od lewej do prawej:
 
-1. **Nasze Miejsce / leśne chwile**
+1. **Nasze Miejsce / Leśne chwile**
 2. **Luna / nasza przyjaciółka**
 3. **Myśli i rozmowy / O życiu, o świecie**
 4. **O nas / idea Klubu**
@@ -26,8 +26,24 @@ Od lewej do prawej:
 
 Każdy kafel będzie prowadził do odpowiedniej podstrony.
 
-## Zmiana kafla 4
+### Powiązane nazwy plików podstron
 
+| Kafel | Plik podstrony |
+| --- | --- |
+| **Nasze Miejsce / Leśne chwile** | `miejsce.html` |
+| **Luna / nasza przyjaciółka** | `luna.html` |
+| **Myśli i rozmowy / O życiu, o świecie** | `mysli.html` |
+| **O nas / idea Klubu** | `o-nas.html` |
+| **Kontakt / napisz do nas** | `kontakt.html` |
+
+## Zmiany napisów w PNG
+
+### Kafel 1
+- Zmiana wyłącznie wielkości litery w pierwszym członie nazwy:
+  **„Nasze miejsce / Leśne chwile” → „Nasze Miejsce / Leśne chwile”**
+- Jest to tylko zmiana małego **„m”** na wielkie **„M”** w słowie „Miejsce”.
+
+### Kafel 4
 - W kaflu 4 **pozostaje ikonka aparatu**.
 - Zmieniamy **wyłącznie napis**:
   **„Zdjęcia / Chwile, które zostają”**
@@ -35,4 +51,4 @@ Każdy kafel będzie prowadził do odpowiedniej podstrony.
   **„O nas / idea Klubu”**
 - Ikonka aparatu nie jest zmieniana ani usuwana.
 
-To będzie jedna ustalona zmiana. Po jej wykonaniu najpierw sprawdzamy efekt, a dopiero potem podejmujemy kolejną decyzję.
+To będą ustalone zmiany. Po wykonaniu każdej zmiany najpierw sprawdzamy efekt, a dopiero potem podejmujemy kolejną decyzję.
