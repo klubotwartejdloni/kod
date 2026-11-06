@@ -8,6 +8,8 @@ Założenia:
 - bez deformowania twarzy i proporcji postaci,
 - w razie potrzeby zmniejszyć kafle,
 - w razie potrzeby obciąć dół grafiki,
+- w razie potrzeby obciąć górę grafiki, tak aby nie stracić ważnych szczegółów,
+- usunąć na górze przyciski, które powtarzają to, co jest na dole w kaflach,
 - zachować główną kompozycję i charakter grafiki,
 - nie rozciągać całego obrazu do 16:9,
 - na tym etapie nie zmieniać kodu strony ani innych elementów projektu.
