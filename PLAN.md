@@ -12,14 +12,17 @@ Założenia:
 - nie rozciągać całego obrazu do 16:9,
 - na tym etapie nie zmieniać kodu strony ani innych elementów projektu.
 
-## Kolejność kafli
+## Kolejność i dokładne nazwy kafli
 
 Od lewej do prawej:
-1. **Miejsce**
-2. **Luna**
-3. **Myśli**
-4. **O nas**
-5. **Kontakt**
+
+1. **Nasze Miejsce / leśne chwile**
+2. **Luna / nasza przyjaciółka**
+3. **Myśli i rozmowy / O życiu, o świecie**
+4. **O nas / idea Klubu**
+5. **Kontakt / napisz do nas**
+
+**Powyższe nazwy są ustalone i nie należy ich samodzielnie zmieniać.**
 
 Każdy kafel będzie prowadził do odpowiedniej podstrony.
 
