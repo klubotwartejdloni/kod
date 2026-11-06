@@ -59,5 +59,29 @@
     })();
   </script>
 
+  <script>
+    (() => {
+      const logViewport = () => {
+        console.log('[KLUB-ZOOM]', {
+          innerWidth: window.innerWidth,
+          innerHeight: window.innerHeight,
+          clientWidth: document.documentElement.clientWidth,
+          clientHeight: document.documentElement.clientHeight,
+          devicePixelRatio: window.devicePixelRatio,
+          visualWidth: window.visualViewport ? window.visualViewport.width : null,
+          visualHeight: window.visualViewport ? window.visualViewport.height : null,
+          visualScale: window.visualViewport ? window.visualViewport.scale : null,
+          visualOffsetLeft: window.visualViewport ? window.visualViewport.offsetLeft : null,
+          visualOffsetTop: window.visualViewport ? window.visualViewport.offsetTop : null
+        });
+      };
+      window.addEventListener('resize', logViewport);
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', logViewport);
+      }
+      logViewport();
+    })();
+  </script>
+
 </body>
 </html>
