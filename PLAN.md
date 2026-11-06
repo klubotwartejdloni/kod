@@ -12,4 +12,11 @@ Założenia:
 - nie rozciągać całego obrazu do 16:9,
 - na tym etapie nie zmieniać kodu strony ani innych elementów projektu.
 
+## Kolejny punkt
+
+- Zmiana w kaflu 4 napisu z:
+  **„Zdjęcia / Chwile, które zostają”**
+  na:
+  **„O nas / idea Klubu”**
+
 To będzie jedna ustalona zmiana. Po jej wykonaniu najpierw sprawdzamy efekt, a dopiero potem podejmujemy kolejną decyzję.
