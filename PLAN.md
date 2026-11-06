@@ -16,7 +16,7 @@ Założenia:
 
 Od lewej do prawej:
 
-1. **Nasze Miejsce / Leśne chwile**
+1. **Nasze miejsce / Leśne chwile**
 2. **Luna / nasza przyjaciółka**
 3. **Myśli i rozmowy / O życiu, o świecie**
 4. **O nas / idea Klubu**
@@ -30,7 +30,7 @@ Każdy kafel będzie prowadził do odpowiedniej podstrony.
 
 | Kafel | Plik podstrony |
 | --- | --- |
-| **Nasze Miejsce / Leśne chwile** | `miejsce.html` |
+| **Nasze miejsce / Leśne chwile** | `miejsce.html` |
 | **Luna / nasza przyjaciółka** | `luna.html` |
 | **Myśli i rozmowy / O życiu, o świecie** | `mysli.html` |
 | **O nas / idea Klubu** | `o-nas.html` |
