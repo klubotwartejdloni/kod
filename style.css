@@ -19,6 +19,8 @@ body.home-page{
   min-height:100dvh;
   margin:0;
   overflow:hidden;
+  position:fixed;
+  inset:0;
   color:#fff;
   background:#18251e;
   font-family:Georgia,"Times New Roman",serif;
