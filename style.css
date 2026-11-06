@@ -53,12 +53,12 @@ body.home-page{
   position:absolute;
   z-index:3;
   left:50%;
-  bottom:8%;
+  bottom:10.5%;
   transform:translateX(-50%);
   display:grid;
   grid-template-columns:repeat(6,minmax(0,1fr));
-  gap:14px;
-  width:min(1080px,calc(100% - 48px));
+  gap:1.6vw;
+  width:min(92vw,1200px);
   margin:0 auto;
   padding:0;
 }
@@ -67,7 +67,7 @@ body.home-page{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:78px;
+  min-height:clamp(72px,9.5vh,112px);
   padding:14px 18px;
   color:transparent;
   background:transparent;
@@ -116,10 +116,10 @@ body.home-page{
   .home-avatar{object-fit:contain;object-position:center center}
   .home-shade{background:linear-gradient(180deg,#101b1620 0%,#101b1640 28%,#101b16c9 100%)}
   .home-tiles{
-    bottom:7%;
+    bottom:8.5%;
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:8px;
-    width:calc(100% - 24px);
+    width:calc(100% - 18px);
     padding:0;
   }
   .home-tile,.home-tile:nth-child(4){
@@ -133,10 +133,10 @@ body.home-page{
 }
 @media(max-width:360px){
   .home-tiles{
-    bottom:6%;
+    bottom:7.5%;
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:6px;
-    width:calc(100% - 18px);
+    width:calc(100% - 14px);
     padding:0;
   }
   .home-tile,.home-tile:nth-child(4){
