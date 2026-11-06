@@ -14,9 +14,11 @@ Założenia:
 
 ## Kolejny punkt
 
-- Zmiana w kaflu 4 napisu z:
+- W kaflu 4 **pozostaje ikonka aparatu**.
+- Zmieniamy **wyłącznie napis**:
   **„Zdjęcia / Chwile, które zostają”**
   na:
   **„O nas / idea Klubu”**
+- Ikonka aparatu nie jest zmieniana ani usuwana.
 
 To będzie jedna ustalona zmiana. Po jej wykonaniu najpierw sprawdzamy efekt, a dopiero potem podejmujemy kolejną decyzję.
