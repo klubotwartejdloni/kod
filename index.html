@@ -24,8 +24,6 @@
       <a class="home-tile" href="kontakt.html">Kontakt – napisz do nas</a>
     </nav>
 
-    <div class="visit-count" aria-label="Licznik odwiedzin" aria-live="polite">Odwiedziny: <span id="visit-number">…</span></div>
-
     <script>
       fetch('https://countapi.mileshilliard.com/api/v1/hit/klubotwartejdloni_homepage_20261106', {cache:'no-store'})
         .then(response => response.json())
@@ -37,6 +35,8 @@
         });
     </script>
   </main>
+
+  <div class="visit-count" aria-label="Licznik odwiedzin" aria-live="polite">Odwiedziny: <span id="visit-number">…</span></div>
 
   <script src="https://counterapi.com/c.js" async></script>
 </body>
