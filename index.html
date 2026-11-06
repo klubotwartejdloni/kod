@@ -26,16 +26,18 @@
       <a class="home-tile" href="kontakt.html">Kontakt – napisz do nas</a>
     </nav>
 
-    <div class="visit-count counterapi"
-      ns="klubotwartejdloni.github.io"
-      action="view"
-      key="homepage"
-      noCss="true"
-      noIcon="true"
-      noLink="true"
-      noFormatting="true"
-      aria-label="Licznik odwiedzin"
-      aria-live="polite"></div>
+    <div class="visit-count" aria-label="Licznik odwiedzin" aria-live="polite">Odwiedziny: <span id="visit-number">…</span></div>
+
+    <script>
+      fetch('https://countapi.mileshilliard.com/api/v1/hit/klubotwartejdloni_homepage_20261106', {cache:'no-store'})
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('visit-number').textContent = data.value;
+        })
+        .catch(() => {
+          document.getElementById('visit-number').textContent = '—';
+        });
+    </script>
   </main>
 
   <script src="https://counterapi.com/c.js" async></script>
