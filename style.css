@@ -93,7 +93,7 @@ body.home-page{
   outline:none;
 }
 .visit-count{
-  position:absolute;
+  position:fixed;
   z-index:10;
   top:max(24px,env(safe-area-inset-top));
   right:0;
