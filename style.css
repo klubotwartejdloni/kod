@@ -108,7 +108,7 @@ body.home-page{
     min-height:0;
     align-items:center;
   }
-  .home-avatar{object-position:center center}
+  .home-avatar{object-fit:contain;object-position:center center}
   .home-shade{background:linear-gradient(180deg,#101b1620 0%,#101b1640 28%,#101b16c9 100%)}
   .home-tiles{
     grid-template-columns:repeat(2,minmax(0,1fr));
