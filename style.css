@@ -78,6 +78,8 @@ body.home-page{
   line-height:1.35;
   opacity:0;
   cursor:pointer;
+  justify-self:center;
+  width:72%;
   transition:none;
 }
 .home-tile:nth-child(4){grid-column:2/span 2}
