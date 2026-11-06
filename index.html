@@ -45,17 +45,6 @@
       counter.setAttribute('aria-live', 'polite');
       counter.innerHTML = 'Odwiedziny: <span id="visit-number">…</span>';
       document.documentElement.appendChild(counter);
-
-      const viewport = window.visualViewport;
-      if (!viewport) return;
-      const updateCounterViewport = () => {
-        const scale = viewport.scale || 1;
-        counter.style.transform = \`scale(\${1 / scale})\`;
-        counter.style.transformOrigin = 'top center';
-      };
-      viewport.addEventListener('resize', updateCounterViewport);
-      viewport.addEventListener('scroll', updateCounterViewport);
-      updateCounterViewport();
     })();
   </script>
 
