@@ -39,9 +39,10 @@ Każdy kafel będzie prowadził do odpowiedniej podstrony.
 ## Zmiany napisów w PNG
 
 ### Kafel 1
-- Zmiana wyłącznie wielkości litery w pierwszym członie nazwy:
-  **„Nasze miejsce / Leśne chwile” → „Nasze Miejsce / Leśne chwile”**
-- Jest to tylko zmiana małego **„m”** na wielkie **„M”** w słowie „Miejsce”.
+- Zmiana wyłącznie jednej litery w drugim członie nazwy:
+  **„Nasze Miejsce / leśne chwile” → „Nasze Miejsce / Leśne chwile”**
+- Jest to tylko zmiana małego **„l”** na wielkie **„L”** w słowie „Leśne”.
+- Słowo **„Miejsce”** pozostaje bez zmian.
 
 ### Kafel 4
 - W kaflu 4 **pozostaje ikonka aparatu**.
