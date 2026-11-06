@@ -47,7 +47,7 @@ body.home-page{
   position:absolute;
   z-index:-1;
   inset:0;
-  background:linear-gradient(180deg,#101b1640 0%,#101b1640 42%,#101b16a8 100%);
+  background:linear-gradient(180deg,#101b1640 0%,#101b1640 42%,#101b1640 100%);
 }
 .home-tiles{
   position:absolute;
