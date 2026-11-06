@@ -36,7 +36,23 @@
     </script>
   </main>
 
-  <div class="visit-count" aria-label="Licznik odwiedzin" aria-live="polite">Odwiedziny: <span id="visit-number">…</span></div>
+  <div class="visit-count" id="visit-counter" aria-label="Licznik odwiedzin" aria-live="polite">Odwiedziny: <span id="visit-number">…</span></div>
+
+  <script>
+    (() => {
+      const counter = document.getElementById('visit-counter');
+      const viewport = window.visualViewport;
+      if (!counter || !viewport) return;
+      const updateCounterViewport = () => {
+        const scale = viewport.scale || 1;
+        counter.style.transform = \`scale(\${1 / scale})\`;
+        counter.style.transformOrigin = 'top center';
+      };
+      viewport.addEventListener('resize', updateCounterViewport);
+      viewport.addEventListener('scroll', updateCounterViewport);
+      updateCounterViewport();
+    })();
+  </script>
 
 </body>
 </html>
