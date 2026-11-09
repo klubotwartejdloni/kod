@@ -10,7 +10,7 @@ Założenia:
 - bez deformowania twarzy i proporcji postaci,
 - najpierw sprawdzić, czy wszystko mieści się bez zmniejszania kafli,
 - jeśli będzie za mało miejsca, zmniejszyć kafle,
-- jeśli nadal będzie potrzeba miejsca, w razie potrzeby obciąć górę grafiki tak, aby nie stracić ważnych szczegółów,
+- nie obcinać góry grafiki,
 - nie obcinać kafli,
 - zachować treść kafli,
 - usunąć na górze przyciski, które powtarzają to, co jest na dole w kaflach,
