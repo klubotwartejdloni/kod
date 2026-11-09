@@ -37,14 +37,14 @@ nav a:hover { background: rgba(82,108,85,.9); }
 h1 { margin-top:0; color:#f2f5ef; }
 .luna-photo { margin-top: 28px; text-align: center; }
 .luna-photo img { display:block; width:100%; max-width:350px; height:auto; margin:0 auto; border-radius:14px; }
-main > p:last-child a {
+.luna-video-link {
   color: #edf3ea;
   text-decoration: underline;
   outline: none;
 }
-main > p:last-child a:focus,
-main > p:last-child a:focus-visible,
-main > p:last-child a:active {
+.luna-video-link:focus,
+.luna-video-link:focus-visible,
+.luna-video-link:active {
   outline: none;
   box-shadow: none;
 }
@@ -72,7 +72,7 @@ main > p:last-child a:active {
     <p>I może dlatego Luna tak dobrze pasuje do naszego Klubu.</p>
     <p>Nie potrzebuje znać odpowiedzi na wszystkie pytania.</p>
     <p>Wystarczy, że jest Luną. 🐾</p>
-    <p><a href="assets/Luna_tunel.mp4" target="_blank" rel="noopener noreferrer">🐾 Tunel Luny</a></p>
+    <p><a class="luna-video-link" href="assets/Luna_tunel.mp4" target="_blank" rel="noopener noreferrer">🐾 Tunel Luny</a></p>
     <div class="luna-photo"><img src="assets/Luna_Mira.png" alt="Luna poznaje Mirę przez telefon"></div>
   </main>
 </body>
