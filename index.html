@@ -59,10 +59,27 @@
       box-shadow: none;
     }
 
+    .visit-count {
+      position: fixed;
+      z-index: 10;
+      top: 24px;
+      right: 24px;
+      color: #fffaf0;
+      font: 500 13px/1 Arial, sans-serif;
+      text-shadow: 0 1px 5px #000;
+      pointer-events: none;
+    }
+
     @media (max-width: 700px) {
       .page > img {
         object-fit: cover;
         object-position: center center;
+      }
+
+      .visit-count {
+        top: max(12px, env(safe-area-inset-top));
+        right: 12px;
+        font-size: 11px;
       }
     }
   </style>
@@ -79,5 +96,20 @@
       <a href="kontakt.html" aria-label="Kontakt – napisz do nas"><span>Kontakt<br>napisz do nas</span></a>
     </nav>
   </div>
+
+  <div class="visit-count" aria-label="Licznik odwiedzin" aria-live="polite">
+    <span id="visit-number">…</span>
+  </div>
+
+  <script>
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/klubotwartejdloni_homepage_20261106', {cache:'no-store'})
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visit-number').textContent = data.value;
+      })
+      .catch(() => {
+        document.getElementById('visit-number').textContent = '—';
+      });
+  </script>
 </body>
 </html>
