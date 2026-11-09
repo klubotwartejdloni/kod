@@ -12,15 +12,48 @@
       overflow: hidden;
     }
 
-    img {
+    .page {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .page > img {
       width: 100vw;
       height: 100vh;
       object-fit: fill;
       display: block;
     }
+
+    .tiles {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 24%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .tiles a {
+      display: block;
+      min-width: 0;
+      min-height: 0;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
+  <div class="page">
+    <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
+
+    <nav class="tiles" aria-label="Nawigacja Klubu">
+      <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"></a>
+      <a href="luna.html" aria-label="Luna – nasza przyjaciółka"></a>
+      <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"></a>
+      <a href="o-nas.html" aria-label="O nas – idea Klubu"></a>
+      <a href="kontakt.html" aria-label="Kontakt – napisz do nas"></a>
+    </nav>
+  </div>
 </body>
 </html>
