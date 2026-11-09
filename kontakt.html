@@ -35,6 +35,23 @@ nav a {
 }
 nav a:hover { background: rgba(82,108,85,.9); }
 h1 { margin-top:0; color:#f2f5ef; }
+  
+    form { display:flex; flex-direction:column; gap:10px; max-width:700px; }
+    label { margin-top:8px; font-weight:600; }
+    input, textarea {
+      width:100%; box-sizing:border-box; padding:12px;
+      border-radius:10px; border:1px solid rgba(205,220,200,.22);
+      background:rgba(8,16,10,.45); color:#edf3ea; font:inherit;
+    }
+    textarea { resize:vertical; }
+    button {
+      align-self:flex-start; margin-top:8px; padding:11px 18px;
+      border:1px solid rgba(205,220,200,.18); border-radius:10px;
+      background:rgba(62,86,66,.85); color:#edf3ea; font:600 15px Arial,sans-serif;
+      cursor:pointer;
+    }
+    button:hover { background:rgba(82,108,85,.95); }
+
   </style>
 </head>
 <body>
@@ -48,7 +65,19 @@ h1 { margin-top:0; color:#f2f5ef; }
       <a href="kontakt.html">Kontakt</a>
     </nav>
     <h1>Kontakt</h1>
-    <p>napisz do nas</p>
+    <p>Jeśli chcesz do nas napisać, zostaw wiadomość.</p>
+
+    <form action="https://formsubmit.co/tomekmatrix67@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Wiadomość z Klubu Otwartej Dłoni">
+      <input type="hidden" name="_next" value="https://klubotwartejdloni.github.io/kod/kontakt.html">
+      <label for="name">Twoje imię lub nick</label>
+      <input id="name" type="text" name="name" required>
+      <label for="email">Twój e-mail</label>
+      <input id="email" type="email" name="email" required>
+      <label for="message">Treść</label>
+      <textarea id="message" name="message" rows="8" required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
   </main>
 </body>
 </html>
