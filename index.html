@@ -37,11 +37,25 @@
     }
 
     .tiles a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       min-width: 0;
       min-height: 0;
+      padding: 12px;
+      box-sizing: border-box;
       text-decoration: none;
       cursor: pointer;
+      color: #263226;
+      font: 600 15px/1.25 Arial, sans-serif;
+      text-align: center;
+    }
+
+    .tiles a span {
+      background: rgba(255, 255, 255, .88);
+      border-radius: 10px;
+      padding: 8px 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .18);
     }
   </style>
 </head>
@@ -50,11 +64,11 @@
     <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
 
     <nav class="tiles" aria-label="Nawigacja Klubu">
-      <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"></a>
-      <a href="luna.html" aria-label="Luna – nasza przyjaciółka"></a>
-      <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"></a>
-      <a href="o-nas.html" aria-label="O nas – idea Klubu"></a>
-      <a href="kontakt.html" aria-label="Kontakt – napisz do nas"></a>
+      <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"><span>Nasze Miejsce<br>Leśne chwile</span></a>
+      <a href="luna.html" aria-label="Luna – nasza przyjaciółka"><span>Luna<br>nasza przyjaciółka</span></a>
+      <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"><span>Myśli i rozmowy<br>O życiu, o świecie</span></a>
+      <a href="o-nas.html" aria-label="O nas – idea Klubu"><span>O nas<br>idea Klubu</span></a>
+      <a href="kontakt.html" aria-label="Kontakt – napisz do nas"><span>Kontakt<br>napisz do nas</span></a>
     </nav>
   </div>
 </body>
