@@ -74,21 +74,25 @@
     @media (max-width: 700px) {
       html, body {
         width: 100%;
-        height: auto;
-        min-height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
       }
 
       .page {
         width: 100vw;
-        height: auto;
+        height: 100vh;
         min-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
       }
 
       .page > img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100vh;
+        max-width: none;
         object-fit: contain;
         display: block;
       }
@@ -96,6 +100,9 @@
       .tiles {
         top: 68%;
         bottom: auto;
+        height: 32%;
+        left: 0;
+        right: 0;
       }
 
       .visit-count {
