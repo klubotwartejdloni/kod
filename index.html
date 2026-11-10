@@ -72,14 +72,36 @@
     }
 
     @media (max-width: 700px) {
+      html, body {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .page {
+        width: 100vw;
+        height: auto;
+        min-height: 0;
+      }
+
       .page > img {
-        object-fit: cover;
-        object-position: center center;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+
+      .tiles {
+        bottom: 0;
       }
 
       .visit-count {
         top: max(12px, env(safe-area-inset-top));
         right: 12px;
+        left: auto;
+        transform: none;
         font-size: 11px;
       }
     }
