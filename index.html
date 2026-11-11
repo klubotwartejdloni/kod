@@ -75,9 +75,8 @@
       html, body {
         width: 100%;
         height: auto;
-        min-height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
+        min-height: 0;
+        overflow: visible;
         background: #000;
       }
 
@@ -109,26 +108,6 @@
       }
     }
 
-    @media (orientation: landscape) and (max-width: 700px) {
-      html, body {
-        height: auto;
-        min-height: 100%;
-        overflow-x: hidden;
-        overflow-y: visible;
-      }
-
-      .page {
-        width: 100vw;
-        height: auto;
-        min-height: 0;
-        margin: 0 auto;
-      }
-
-      .page > img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }    }
 
   </style>
 </head>
