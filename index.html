@@ -71,59 +71,63 @@
       pointer-events: none;
     }
 
-    /* Mobile: niezależny układ strony — normalny dokument, bez ograniczania viewportem. */
-    @media (max-width: 700px) {
-      html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100%;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        background: #000;
-      }
+    /* Mobile: osobny układ dokumentu. Desktopowy .page pozostaje bez zmian. */
+    .mobile-page {
+      display: none;
+    }
 
+    @media (max-width: 700px) {
+      html,
       body {
         margin: 0;
         padding: 0;
         width: 100%;
-        min-height: 100%;
         height: auto;
-        overflow: visible;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
         background: #000;
       }
 
       .page {
+        display: none;
+      }
+
+      .mobile-page {
+        display: block;
         position: relative;
         width: 100%;
         height: auto;
-        min-height: 0;
         margin: 0;
         padding: 0;
-        overflow: visible;
       }
 
-      .page > img {
+      .mobile-page > img {
         display: block;
         width: 100%;
         height: auto;
-        min-width: 0;
-        max-width: none;
-        min-height: 0;
-        object-fit: contain;
+        margin: 0;
+        padding: 0;
       }
 
-      .tiles {
+      .mobile-tiles {
         position: absolute;
         left: 0;
         right: 0;
-        top: auto;
         bottom: 0;
         width: 100%;
-        height: 32%;
-        margin: 0;
+        height: 19.37vw;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        z-index: 2;
+      }
+
+      .mobile-tiles a {
+        display: block;
+        min-width: 0;
+        min-height: 0;
         padding: 0;
+        text-decoration: none;
       }
 
       .visit-count {
@@ -148,6 +152,17 @@
       <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"><span>Myśli i rozmowy<br>O życiu, o świecie</span></a>
       <a href="o-nas.html" aria-label="O nas – idea Klubu"><span>O nas<br>idea Klubu</span></a>
       <a href="kontakt.html" aria-label="Kontakt – napisz do nas"><span>Kontakt<br>napisz do nas</span></a>
+    </nav>
+  </div>
+
+  <div class="mobile-page" aria-label="Klub Otwartej Dłoni — wersja mobilna">
+    <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
+    <nav class="mobile-tiles" aria-label="Nawigacja Klubu">
+      <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"></a>
+      <a href="luna.html" aria-label="Luna – nasza przyjaciółka"></a>
+      <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"></a>
+      <a href="o-nas.html" aria-label="O nas – idea Klubu"></a>
+      <a href="kontakt.html" aria-label="Kontakt – napisz do nas"></a>
     </nav>
   </div>
 
