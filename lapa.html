@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test łapy — Klub Otwartej Dłoni</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .page {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .page > img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: fill;
+      display: block;
+    }
+
+    .tiles {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 32%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      z-index: 2;
+    }
+
+    .tiles a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 0;
+      padding: 12px;
+      box-sizing: border-box;
+      text-decoration: none;
+      cursor: pointer;
+      color: transparent;
+      font: 600 15px/1.25 Arial, sans-serif;
+      text-align: center;
+      transform: translateY(22px);
+    }
+
+    .tiles a span {
+      background: transparent;
+      border-radius: 10px;
+      padding: 8px 10px;
+      box-shadow: none;
+    }
+
+    .visit-count {
+      position: fixed;
+      z-index: 10;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fffaf0;
+      font: 500 13px/1 Arial, sans-serif;
+      text-shadow: 0 1px 5px #000;
+      pointer-events: none;
+    }
+
+    .mobile-page {
+      display: none;
+    }
+
+    @media (max-width: 1000px) and (pointer: coarse) {
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: #000;
+      }
+
+      .page {
+        display: none;
+      }
+
+      .mobile-page {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile-page > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile-tiles {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 19.37vw;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        z-index: 2;
+      }
+
+      .mobile-tiles a {
+        display: block;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+
+      .visit-count {
+        top: max(12px, env(safe-area-inset-top));
+        right: 12px;
+        left: auto;
+        transform: none;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
+
+    <nav class="tiles" aria-label="Nawigacja Klubu">
+      <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"><span>Nasze Miejsce<br>Leśne chwile</span></a>
+      <a href="luna.html" aria-label="Luna – nasza przyjaciółka"><span>Luna<br>nasza przyjaciółka</span></a>
+      <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"><span>Myśli i rozmowy<br>O życiu, o świecie</span></a>
+      <a href="o-nas.html" aria-label="O nas – idea Klubu"><span>O nas<br>idea Klubu</span></a>
+      <a href="kontakt.html" aria-label="Kontakt – napisz do nas"><span>Kontakt<br>napisz do nas</span></a>
+    </nav>
+  </div>
+
+  <div class="mobile-page" aria-label="Klub Otwartej Dłoni — wersja mobilna">
+    <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
+    <nav class="mobile-tiles" aria-label="Nawigacja Klubu">
+      <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"></a>
+      <a href="luna.html" aria-label="Luna – nasza przyjaciółka"></a>
+      <a href="mysli.html" aria-label="Myśli i rozmowy – O życiu, o świecie"></a>
+      <a href="o-nas.html" aria-label="O nas – idea Klubu"></a>
+      <a href="kontakt.html" aria-label="Kontakt – napisz do nas"></a>
+    </nav>
+  </div>
+
+  <div class="visit-count" aria-label="Licznik odwiedzin" aria-live="polite">
+    <span id="visit-number">…</span>
+  </div>
+
+  <script>
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/klubotwartejdloni_lapa_test_20261112', {cache:'no-store'})
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visit-number').textContent = data.value;
+      })
+      .catch(() => {
+        document.getElementById('visit-number').textContent = '—';
+      });
+  </script>
+</body>
+</html>
