@@ -25,6 +25,33 @@
       display: block;
     }
 
+    .fire-overlay {
+      position:absolute; left:-2.2vw; top:21.5vh; width:8.5vw; height:18vh;
+      z-index:1; pointer-events:none; overflow:hidden; mix-blend-mode:screen;
+    }
+    .fire-overlay svg { width:100%; height:100%; display:block; }
+    .fire-overlay-middle {
+      position:absolute; left:44.8vw; top:71.3vh; width:6.8vw; height:14.4vh;
+      z-index:1; pointer-events:none; overflow:hidden; mix-blend-mode:screen;
+    }
+    .fire-overlay-middle svg { width:100%; height:100%; display:block; }
+    .flame { transform-origin:60px 185px; }
+    .flame-a { fill:#ffd45a; animation:flameA 1.15s ease-in-out infinite alternate; }
+    .flame-b { fill:#ff9f1c; animation:flameB 0.9s ease-in-out infinite alternate-reverse; }
+    .flame-c { fill:#fff0a6; animation:flameC 1.35s ease-in-out infinite alternate; }
+    @keyframes flameA {
+      from { transform:translateX(-2px) scaleX(.94) scaleY(.96); opacity:.38; }
+      to { transform:translateX(3px) scaleX(1.04) scaleY(1.04); opacity:.53; }
+    }
+    @keyframes flameB {
+      from { transform:translateX(2px) scaleX(1.02) scaleY(.95); opacity:.29; }
+      to { transform:translateX(-3px) scaleX(.92) scaleY(1.05); opacity:.45; }
+    }
+    @keyframes flameC {
+      from { transform:translateX(-1px) scaleX(.9) scaleY(.92); opacity:.23; }
+      to { transform:translateX(2px) scaleX(1.08) scaleY(1.08); opacity:.37; }
+    }
+
     .tiles {
       position: absolute;
       left: 0;
@@ -71,7 +98,6 @@
       pointer-events: none;
     }
 
-    /* Mobile: osobny układ dokumentu. Desktopowy .page pozostaje bez zmian. */
     .mobile-page {
       display: none;
     }
@@ -138,13 +164,27 @@
         font-size: 11px;
       }
     }
-
-
   </style>
 </head>
 <body>
   <div class="page">
     <img src="assets/projekt-klubu.png" alt="Klub Otwartej Dłoni">
+
+    <div class="fire-overlay" aria-hidden="true">
+      <svg viewBox="0 0 120 190" preserveAspectRatio="none">
+        <g class="flame flame-a"><path d="M60 185 C45 166 53 148 68 132 C62 112 78 98 88 78 C99 105 111 119 103 143 C99 158 89 172 82 185 Z"/></g>
+        <g class="flame flame-b"><path d="M38 185 C25 166 34 151 48 137 C43 119 55 106 65 91 C72 112 83 126 75 148 C70 164 58 177 55 185 Z"/></g>
+        <g class="flame flame-c"><path d="M78 185 C68 166 77 153 88 140 C84 122 96 108 105 94 C111 116 119 132 113 151 C108 167 98 177 94 185 Z"/></g>
+      </svg>
+    </div>
+
+    <div class="fire-overlay-middle" aria-hidden="true">
+      <svg viewBox="0 0 120 190" preserveAspectRatio="none">
+        <g class="flame flame-a"><path d="M60 185 C45 166 53 148 68 132 C62 112 78 98 88 78 C99 105 111 119 103 143 C99 158 89 172 82 185 Z"/></g>
+        <g class="flame flame-b"><path d="M38 185 C25 166 34 151 48 137 C43 119 55 106 65 91 C72 112 83 126 75 148 C70 164 58 177 55 185 Z"/></g>
+        <g class="flame flame-c"><path d="M78 185 C68 166 77 153 88 140 C84 122 96 108 105 94 C111 116 119 132 113 151 C108 167 98 177 94 185 Z"/></g>
+      </svg>
+    </div>
 
     <nav class="tiles" aria-label="Nawigacja Klubu">
       <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"><span>Nasze Miejsce<br>Leśne chwile</span></a>
