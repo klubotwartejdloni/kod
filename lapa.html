@@ -8,7 +8,7 @@
     html, body { margin:0; width:100%; height:100%; overflow:hidden; }
     .page { position:relative; width:100vw; height:100vh; overflow:hidden; }
     .page > img.base { width:100vw; height:100vh; object-fit:fill; display:block; }
-    .hand-gif { position:absolute; left:calc(20 / 2048 * 100vw); top:0; width:calc(160 / 2048 * 100vw); height:calc(155 / 1152 * 100vh); display:block; pointer-events:none; z-index:1; transform-origin:50% 72%; animation: handWave 1.8s ease-in-out infinite alternate; }\n    @keyframes handWave { from { transform:translate(-2px, 1px) rotate(-2deg); } to { transform:translate(2px, -1px) rotate(2deg); } }
+    .hand-gif { position:absolute; left:0; top:0; width:calc(220 / 2048 * 100vw); height:calc(228 / 1152 * 100vh); display:block; pointer-events:none; z-index:1; transform-origin:50% 72%; animation: handWave 1.8s ease-in-out infinite alternate; }\n    @keyframes handWave { from { transform:translate(-2px, 1px) rotate(-2deg); } to { transform:translate(2px, -1px) rotate(2deg); } }
     .tiles {
       position:absolute; left:0; right:0; bottom:0; height:32%;
       display:grid; grid-template-columns:repeat(5,1fr); z-index:2;
