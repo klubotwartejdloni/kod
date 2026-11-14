@@ -8,8 +8,6 @@
     html, body { margin:0; width:100%; height:100%; overflow:hidden; }
     .page { position:relative; width:100vw; height:100vh; overflow:hidden; }
     .page > img.base { width:100vw; height:100vh; object-fit:fill; display:block; }
-
-    /* Tylko wycięta dłoń — bez fragmentu kominka ani tła. */
     .paw-test {
       position:absolute;
       left:calc(35 / 2048 * 100vw);
@@ -20,8 +18,6 @@
       pointer-events:none;
       z-index:1;
     }
-
-
     .tiles {
       position:absolute; left:0; right:0; bottom:0; height:32%;
       display:grid; grid-template-columns:repeat(5,1fr); z-index:2;
@@ -37,8 +33,8 @@
 </head>
 <body>
   <div class="page">
-    <img class="base" src="assets/projekt-klubu-lapa-test.png?v=2" alt="">
-    <img class="paw-test" src="assets/animowana-dlon-bez-podwojnej-linii.gif?v=2" alt="" aria-hidden="true">
+    <img class="base" src="assets/projekt-klubu-lapa-test.png?v=3" alt="">
+    <img class="paw-test" src="assets/animowana-dlon-lapa-test-v3.gif" alt="" aria-hidden="true">
     <nav class="tiles" aria-label="Nawigacja Klubu">
       <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"><span>Nasze Miejsce<br>Leśne chwile</span></a>
       <a href="luna.html" aria-label="Luna – nasza przyjaciółka"><span>Luna<br>nasza przyjaciółka</span></a>
