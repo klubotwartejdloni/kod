@@ -26,8 +26,9 @@
       display: block;
     }
 
-    /* Tylko obszar dłoni jest nakładany i poruszany.
-       Reszta obrazu pozostaje całkowicie nieruchoma. */
+    /* Warstwa zawiera dokładnie ten sam obraz, ale maska
+       z jego jasności wycina wszystkie czarne piksele.
+       Dzięki temu porusza się tylko złoty rysunek dłoni. */
     .paw-test {
       position: absolute;
       inset: 0;
@@ -35,37 +36,18 @@
       height: 100vh;
       background: url("assets/projekt-klubu-lapa-test.png") 0 0 / 100% 100% no-repeat;
       pointer-events: none;
-      mix-blend-mode: screen;
-      clip-path: polygon(
-        2.0% 0.0%,
-        3.0% 1.5%,
-        3.8% 0.0%,
-        4.7% 0.0%,
-        5.2% 5.0%,
-        5.8% 9.5%,
-        6.4% 0.0%,
-        7.0% 0.0%,
-        7.5% 4.0%,
-        8.0% 0.0%,
-        8.8% 0.0%,
-        9.2% 8.0%,
-        9.8% 0.0%,
-        10.4% 0.0%,
-        10.7% 10.0%,
-        11.5% 16.0%,
-        10.8% 22.0%,
-        9.5% 27.0%,
-        8.8% 30.0%,
-        7.7% 30.5%,
-        6.6% 28.5%,
-        5.6% 25.0%,
-        4.6% 22.0%,
-        3.5% 19.0%,
-        2.8% 15.0%,
-        2.1% 11.0%,
-        1.7% 7.0%
-      );
-      transform-origin: 7.0% 12%;
+
+      -webkit-mask-image: url("assets/projekt-klubu-lapa-test.png");
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: 0 0;
+      -webkit-mask-size: 100% 100%;
+
+      mask-image: url("assets/projekt-klubu-lapa-test.png");
+      mask-repeat: no-repeat;
+      mask-position: 0 0;
+      mask-size: 100% 100%;
+
+      transform-origin: 7% 12%;
       animation: delikatne-machanie 1.44s ease-in-out infinite;
       z-index: 1;
     }
