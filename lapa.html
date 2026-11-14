@@ -16,13 +16,38 @@
       position: relative;
       width: 100vw;
       height: 100vh;
+      overflow: hidden;
     }
 
-    .page > img {
+    .page > img.base {
       width: 100vw;
       height: 100vh;
       object-fit: fill;
       display: block;
+    }
+
+    /* Tymczasowa warstwa testowa ruchu dłoni.
+       Korzysta z tego samego PNG, więc niczego nowego nie wgrywamy
+       i nie ruszamy oryginału. */
+    .paw-test {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: fill;
+      display: block;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      transform-origin: 7.5vw 8.5vh;
+      animation: delikatne-machanie 1.44s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes delikatne-machanie {
+      0%, 100% { transform: rotate(0deg) translate(0, 0); }
+      25% { transform: rotate(-1deg) translate(-1px, 0); }
+      50% { transform: rotate(-1.8deg) translate(-2px, 1px); }
+      75% { transform: rotate(1deg) translate(1px, 0); }
     }
 
     .tiles {
@@ -62,7 +87,8 @@
 </head>
 <body>
   <div class="page">
-    <img src="assets/projekt-klubu-lapa-test.png" alt="Klub Otwartej Dłoni">
+    <img class="base" src="assets/projekt-klubu-lapa-test.png" alt="Klub Otwartej Dłoni">
+    <img class="paw-test" src="assets/projekt-klubu-lapa-test.png" alt="" aria-hidden="true">
 
     <nav class="tiles" aria-label="Nawigacja Klubu">
       <a href="miejsce.html" aria-label="Nasze Miejsce – Leśne chwile"><span>Nasze Miejsce<br>Leśne chwile</span></a>
