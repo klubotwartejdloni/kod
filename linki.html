@@ -47,12 +47,18 @@ p { line-height: 1.65; }
 .links-list {
   margin: 0;
   padding-left: 28px;
+  columns: 2;
+  column-gap: 48px;
 }
-.links-list li { margin: 8px 0; }
+.links-list li {
+  margin: 8px 0;
+  break-inside: avoid;
+}
 .links-list a { color: #dfead9; }
 @media (max-width: 700px) {
   body { padding: 16px; }
   main { padding: 24px; }
+  .links-list { columns: 1; }
 }
   </style>
 </head>
