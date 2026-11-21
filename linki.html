@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Linki – Klub Otwartej Dłoni</title>
-  <style>html, body { margin: 0; min-height: 100%; }
+  <style>
+html, body { margin: 0; min-height: 100%; }
 body {
   font-family: Arial, sans-serif;
   background:
@@ -37,9 +38,22 @@ nav a {
 nav a:hover { background: rgba(82,108,85,.9); }
 h1 { margin-top: 0; color: #f2f5ef; }
 p { line-height: 1.65; }
-.links-list { margin-top: 24px; padding-left: 28px; columns: 2; column-gap: 48px; }
-.links-list li { margin: 8px 0; break-inside: avoid; }
+.link-group { margin-top: 28px; }
+.link-group h2 {
+  margin: 0 0 12px;
+  color: #f2f5ef;
+  font-size: 20px;
+}
+.links-list {
+  margin: 0;
+  padding-left: 28px;
+}
+.links-list li { margin: 8px 0; }
 .links-list a { color: #dfead9; }
+@media (max-width: 700px) {
+  body { padding: 16px; }
+  main { padding: 24px; }
+}
   </style>
 </head>
 <body>
@@ -52,24 +66,51 @@ p { line-height: 1.65; }
 
     <p>To miejsce będziemy stopniowo wypełniać ciekawymi linkami.</p>
 
-    <ol class="links-list">
-      <li><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a></li>
-      <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
-      <li><a href="https://science.nasa.gov/apod/" target="_blank" rel="noopener noreferrer">NASA – Astronomy Picture of the Day</a></li>
-      <li><a href="https://artsandculture.google.com/" target="_blank" rel="noopener noreferrer">Google Arts &amp; Culture</a></li>
-      <li><a href="https://archive.org/" target="_blank" rel="noopener noreferrer">Internet Archive</a></li>
-      <li><a href="https://explore.org/" target="_blank" rel="noopener noreferrer">Explore.org</a></li>
-      <li><a href="https://klubotwartejdloni.pl/" target="_blank" rel="noopener noreferrer">Klub Otwartej Dłoni</a></li>
-      <li><a href="https://www.facebook.com/groups/1130439489833266/" target="_blank" rel="noopener noreferrer">Klub Otwartej Dłoni – rozmowy na Facebooku</a></li>
-      <li><a href="https://science.nasa.gov/asset/hubble/the-mira-binary-system-a-red-giant-star-and-its-hot-companion/" target="_blank" rel="noopener noreferrer">Mira Ceti – układ podwójny, NASA / Hubble</a></li>
-      <li><a href="https://bielik.ai/" target="_blank" rel="noopener noreferrer">Bielik</a></li>
-      <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a></li>
-      <li><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer">Copilot</a></li>
-      <li><a href="https://www.wolframalpha.com/" target="_blank" rel="noopener noreferrer">WolframAlpha</a></li>
-      <li><a href="https://stellarium-web.org/" target="_blank" rel="noopener noreferrer">Stellarium Web</a></li>
-      <li><a href="https://earth.google.com/" target="_blank" rel="noopener noreferrer">Google Earth</a></li>
-      <li><a href="https://przyrodapolski.pl/" target="_blank" rel="noopener noreferrer">Przyroda Polski</a></li>
-    </ol>
+    <section class="link-group">
+      <h2>🌌 Kosmos i nauka</h2>
+      <ul class="links-list">
+        <li><a href="https://science.nasa.gov/apod/" target="_blank" rel="noopener noreferrer">NASA – Astronomy Picture of the Day</a></li>
+        <li><a href="https://science.nasa.gov/asset/hubble/the-mira-binary-system-a-red-giant-star-and-its-hot-companion/" target="_blank" rel="noopener noreferrer">Mira Ceti – układ podwójny, NASA / Hubble</a></li>
+        <li><a href="https://stellarium-web.org/" target="_blank" rel="noopener noreferrer">Stellarium Web</a></li>
+        <li><a href="https://www.wolframalpha.com/" target="_blank" rel="noopener noreferrer">WolframAlpha</a></li>
+      </ul>
+    </section>
+
+    <section class="link-group">
+      <h2>🌿 Świat i przyroda</h2>
+      <ul class="links-list">
+        <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
+        <li><a href="https://explore.org/" target="_blank" rel="noopener noreferrer">Explore.org</a></li>
+        <li><a href="https://earth.google.com/" target="_blank" rel="noopener noreferrer">Google Earth</a></li>
+        <li><a href="https://przyrodapolski.pl/" target="_blank" rel="noopener noreferrer">Przyroda Polski</a></li>
+      </ul>
+    </section>
+
+    <section class="link-group">
+      <h2>🎨 Sztuka i kultura</h2>
+      <ul class="links-list">
+        <li><a href="https://artsandculture.google.com/" target="_blank" rel="noopener noreferrer">Google Arts &amp; Culture</a></li>
+        <li><a href="https://archive.org/" target="_blank" rel="noopener noreferrer">Internet Archive</a></li>
+      </ul>
+    </section>
+
+    <section class="link-group">
+      <h2>🤖 AI</h2>
+      <ul class="links-list">
+        <li><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a></li>
+        <li><a href="https://bielik.ai/" target="_blank" rel="noopener noreferrer">Bielik</a></li>
+        <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a></li>
+        <li><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer">Copilot</a></li>
+      </ul>
+    </section>
+
+    <section class="link-group">
+      <h2>🏡 Nasze miejsca</h2>
+      <ul class="links-list">
+        <li><a href="https://klubotwartejdloni.pl/" target="_blank" rel="noopener noreferrer">Klub Otwartej Dłoni</a></li>
+        <li><a href="https://www.facebook.com/groups/1130439489833266/" target="_blank" rel="noopener noreferrer">Klub Otwartej Dłoni – rozmowy na Facebooku</a></li>
+      </ul>
+    </section>
 
     <p style="text-align:center; margin-top:32px; font-size:13px; opacity:0.7;">© 2026 Tomek / Mira / Luna</p>
   </main>
